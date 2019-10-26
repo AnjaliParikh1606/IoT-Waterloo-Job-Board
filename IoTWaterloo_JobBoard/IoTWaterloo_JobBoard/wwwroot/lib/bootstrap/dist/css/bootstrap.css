@@ -552,7 +552,7 @@ pre {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background-color:white;
+   
 }
 
 @media (min-width: 576px) {
@@ -3236,16 +3236,18 @@ input[type="button"].btn-block {
     display: none;
     float: left;
     min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
+    padding: 0.1rem 0;
+    margin: 0.75rem 0 0;
     font-size: 1rem;
     color: #212529;
-    text-align: left;
+    text-align: center;
     list-style: none;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
+    border-top-color:whitesmoke;
+    
 }
 
 .dropdown-menu-left {
@@ -4236,21 +4238,25 @@ input[type="button"].btn-block {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    position: relative;
 }
 
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
+    position: relative;
 }
 
     .nav-link:hover, .nav-link:focus {
         text-decoration: none;
+        position: relative;
     }
 
     .nav-link.disabled {
         color: #6c757d;
         pointer-events: none;
         cursor: default;
+        position: relative;
     }
 
 .nav-tabs {
@@ -4259,12 +4265,15 @@ input[type="button"].btn-block {
 
     .nav-tabs .nav-item {
         margin-bottom: -1px;
+        color: white;
+        position: relative;
     }
 
     .nav-tabs .nav-link {
         border: 1px solid transparent;
         border-top-left-radius: 0.25rem;
         border-top-right-radius: 0.25rem;
+        position: relative;
     }
 
         .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
@@ -4288,6 +4297,7 @@ input[type="button"].btn-block {
         margin-top: -1px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        position: relative;
     }
 
 .nav-pills .nav-link {
@@ -4333,10 +4343,12 @@ input[type="button"].btn-block {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+    
 }
 
     .navbar > .container,
     .navbar > .container-fluid {
+        position: relative;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
@@ -4355,6 +4367,7 @@ input[type="button"].btn-block {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    position: relative;
 }
 
     .navbar-brand:hover, .navbar-brand:focus {
@@ -4366,9 +4379,10 @@ input[type="button"].btn-block {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-left: 0;
+    padding-left: 90px position: relative;
     margin-bottom: 0;
     list-style: none;
+    position: relative;
 }
 
     .navbar-nav .nav-link {
@@ -4379,12 +4393,16 @@ input[type="button"].btn-block {
     .navbar-nav .dropdown-menu {
         position: static;
         float: none;
+        background-color: transparent;
+        font-size: 22px;
+        position: relative;
     }
 
 .navbar-text {
     display: inline-block;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+ 
 }
 
 .navbar-collapse {
@@ -6812,6 +6830,9 @@ button.bg-light:focus {
 
 .bg-dark {
     background-color: #343a40 !important;
+}
+.bg-purple {
+    background-color: #890a4e !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,

@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
-<head >
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - IoTWaterloo_JobBoard</title>
+    <link rel="icon" type="image/ico" href="~/Images/HeaderLogo.png"/>
+    <title> @ViewData["Title"] - IoTWaterloo_JobBoard</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -19,37 +20,45 @@
     <link href="~/css/LayoutStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <div style="border:solid">
-            <div style="float:left; margin-left:30PX; margin-top:5PX;padding:0;"><img src="~/Images/IoTWatrloologo.png" /> </div>
+    <header style="height:100px;">
+       
+        <div class="Image" >
+            <div style="float:left; margin-left:25PX; margin-top:8PX;"> </div>
             <!-- <img class="iconeSyle" src="~/Images/iotWaterloo-logo-2.png" />-->
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white  box-shadow mb-3">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent  box-shadow mb-3">
                 <div class="container" style="float:right;  padding-top:10px; font-size:26px;">
 
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
                         <!--   <partial name="_LoginPartial" /> -->
 
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                        <ul class="navbar-nav flex-grow-1" >
+                            <li>
+                                <div style="width:180px;">&nbsp;</div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                                <ul class="dropdown-menu text-white bg-purple border-top">
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Employers</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
+                                <a class="nav-link text-white" style="width:112px;" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Talent</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Talent</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Event&News</a>
+                                <a class="nav-link text-white" style="width:178px;" asp-area="" asp-controller="Home" asp-action="Index">Event & News</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Partners</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Partners</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Compnay</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Compnay</a>
                             </li>
                         </ul>
                     </div>
@@ -57,13 +66,14 @@
             </nav>
         </div>
     </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div style="background-color:#faf3e8">
+        <div class="container">
+            <partial name="_CookieConsentPartial" />
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2019 - IoTWaterloo_JobBoard - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
