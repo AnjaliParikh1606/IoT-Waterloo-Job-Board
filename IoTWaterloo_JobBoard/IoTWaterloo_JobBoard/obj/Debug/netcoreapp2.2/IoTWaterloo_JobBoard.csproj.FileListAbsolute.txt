@@ -66,3 +66,8 @@ A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterlo
 A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.dll
 A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.pdb
 A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.csproj.CopyComplete
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Create.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Delete.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Details.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Edit.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Index.cshtml.g.cs

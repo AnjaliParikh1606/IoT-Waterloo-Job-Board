@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using IoTWaterloo_JobBoard.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using IoTWaterloo_JobBoard.Models;
 
 namespace IoTWaterloo_JobBoard
 {
@@ -41,6 +42,9 @@ namespace IoTWaterloo_JobBoard
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddDbContext<JobBoardContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("JobBoardConnetionString")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
