@@ -1,0 +1,89 @@
+﻿@model IOTWaterloo_JobBoard.Models.JobDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>JobDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="JobId" />
+            <div class="form-group">
+                <label asp-for="JobTitle" class="control-label"></label>
+                <input asp-for="JobTitle" class="form-control" />
+                <span asp-validation-for="JobTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Jobtype" class="control-label"></label>
+                <input asp-for="Jobtype" class="form-control" />
+                <span asp-validation-for="Jobtype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxSalary" class="control-label"></label>
+                <input asp-for="MaxSalary" class="form-control" />
+                <span asp-validation-for="MaxSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinSalary" class="control-label"></label>
+                <input asp-for="MinSalary" class="form-control" />
+                <span asp-validation-for="MinSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobDescription" class="control-label"></label>
+                <input asp-for="JobDescription" class="form-control" />
+                <span asp-validation-for="JobDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PayPeriod" class="control-label"></label>
+                <input asp-for="PayPeriod" class="form-control" />
+                <span asp-validation-for="PayPeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberOfPosition" class="control-label"></label>
+                <input asp-for="NumberOfPosition" class="form-control" />
+                <span asp-validation-for="NumberOfPosition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobPostDate" class="control-label"></label>
+                <input asp-for="JobPostDate" class="form-control" />
+                <span asp-validation-for="JobPostDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobExpiryDate" class="control-label"></label>
+                <input asp-for="JobExpiryDate" class="form-control" />
+                <span asp-validation-for="JobExpiryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompnayId" class="control-label"></label>
+                <select asp-for="CompnayId" class="form-control" asp-items="ViewBag.CompnayId"></select>
+                <span asp-validation-for="CompnayId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

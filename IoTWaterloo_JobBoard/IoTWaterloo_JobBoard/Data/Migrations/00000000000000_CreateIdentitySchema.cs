@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace IoTWaterloo_JobBoard.Data.Migrations
+namespace IOTWaterloo_JobBoard.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

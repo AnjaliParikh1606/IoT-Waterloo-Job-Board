@@ -20,20 +20,22 @@
     <link href="~/css/LayoutStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <header style="height:100px;">
-       
-        <div class="Image" >
-            <div style="float:left; margin-left:25PX; margin-top:8PX;"> </div>
+    <header>       
+        <div class="Image float-left img-fluid" >
+            <div class="navbar-expand-md"> </div>
             <!-- <img class="iconeSyle" src="~/Images/iotWaterloo-logo-2.png" />-->
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent  box-shadow mb-3">
-                <div class="container" style="float:right;  padding-top:10px; font-size:26px;">
-
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3">
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="container float-right" style="padding-top:10px; font-size:26px;">
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row" >
                         <!--   <partial name="_LoginPartial" /> -->
-
-                        <ul class="navbar-nav flex-grow-1" >
+                        
+                        <ul class="navbar-nav flex-grow-1">
                             <li>
-                                <div style="width:180px;">&nbsp;</div>
+                                <div class="" style="width:180px;">&nbsp;</div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
@@ -42,11 +44,19 @@
                                     <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Employers</a>
+                                <ul class="dropdown-menu text-white bg-purple border-top">
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Create Employers</a></li>
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">View Employers</a></li>
+                                </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" style="width:112px;" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
+                                <ul class="dropdown-menu text-white bg-purple border-top">
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Index">Create Post</a></li>
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">View Post</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Talent</a>
@@ -66,7 +76,7 @@
             </nav>
         </div>
     </header>
-    <div style="background-color:#faf3e8">
+    <div>
         <div class="container">
             <partial name="_CookieConsentPartial" />
             <main role="main" class="pb-3">
@@ -74,15 +84,49 @@
             </main>
         </div>
     </div>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - IoTWaterloo_JobBoard - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer id="footer">
+        <div id="push"></div>
+        <div class="navBarImage row text-white text-center">
+            
+            <div class="col-md-4"> 
+            <div>
+                <a>PRIVACY POLICY</a><br/>
+                <a>TERMS & CONDITIONS</a><br />
+                <a>ABOUT</a>
+                  </div></div>
+             <div class="col-md-4"><h3>Internet Of Things Waterloo Region</h3>
+                                        <h4> Co-Creating The Future</h4>
+                                        <div>
+                                             <img src="~/Images/facebook.png" />
+                                             <img src="~/Images/InstagramIcon.png" />
+                                             <img src="~/Images/twitter.png" />
+                                             <img src="~/Images/Youtube.png" />
+                                         </div>                                                                                             
+            </div>
+            <div class="col-md-4">
+            <div>
+                <a>CONTACT</a><br />
+                <a>PARTNERS</a><br />
+                <a>NEWS</a>
+                 </div> </div>
+           
         </div>
     </footer>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script>
+            x = $('#div-that-increase-height').height() + 20; // +20 gives space between div and footer
+            y = $(window).height();
+            if (x + 100 <= y) { // 100 is the height of your footer
+                $('#footer').css('top', y - 100 + 'px');// again 100 is the height of your footer
+                $('#footer').css('display', 'block');
+            } else {
+                $('#footer').css('top', x + 'px');
+                $('#footer').css('display', 'block');
+            }
+        </script>
     </environment>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"

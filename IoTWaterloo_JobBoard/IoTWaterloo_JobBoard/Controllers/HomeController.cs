@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using IoTWaterloo_JobBoard.Models;
+using IOTWaterloo_JobBoard.Models;
 
-namespace IoTWaterloo_JobBoard.Controllers
+namespace IOTWaterloo_JobBoard.Controllers
 {
     public class HomeController : Controller
     {

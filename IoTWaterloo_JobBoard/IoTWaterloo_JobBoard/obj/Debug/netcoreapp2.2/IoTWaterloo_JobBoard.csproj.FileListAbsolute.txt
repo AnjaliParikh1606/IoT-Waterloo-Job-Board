@@ -1,73 +1,44 @@
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\appsettings.Development.json
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\appsettings.json
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.deps.json
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.runtimeconfig.json
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.runtimeconfig.dev.json
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.dll
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.pdb
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.Views.dll
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.Views.pdb
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorAssemblyInfo.cache
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorAssemblyInfo.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.AssemblyInfoInputs.cache
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.AssemblyInfo.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.TagHelpers.input.cache
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.TagHelpers.output.cache
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorCoreGenerate.cache
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorTargetAssemblyInfo.cache
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorTargetAssemblyInfo.cs
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.Views.pdb
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.dll
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.pdb
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.csproj.CopyComplete
-A:\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.csprojAssemblyReference.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\appsettings.Development.json
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\appsettings.json
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.deps.json
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.runtimeconfig.json
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.runtimeconfig.dev.json
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.dll
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.pdb
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.Views.dll
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.Views.pdb
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.csprojAssemblyReference.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorAssemblyInfo.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorAssemblyInfo.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.AssemblyInfoInputs.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.AssemblyInfo.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.TagHelpers.input.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.TagHelpers.output.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorCoreGenerate.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorTargetAssemblyInfo.cache
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.RazorTargetAssemblyInfo.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.Views.pdb
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.dll
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.pdb
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IoTWaterloo_JobBoard.csproj.CopyComplete
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Create.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Delete.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Details.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Edit.cshtml.g.cs
-A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IoTWaterloo_JobBoard\IoTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\AgencyDetails\Index.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\appsettings.Development.json
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\appsettings.json
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.deps.json
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.runtimeconfig.json
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.runtimeconfig.dev.json
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.dll
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.pdb
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.Views.dll
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\bin\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.Views.pdb
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.RazorAssemblyInfo.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.RazorAssemblyInfo.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.AssemblyInfoInputs.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.AssemblyInfo.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.TagHelpers.input.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.TagHelpers.output.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.RazorCoreGenerate.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\JobDetail\Create.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\JobDetail\Delete.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\JobDetail\Details.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\JobDetail\Edit.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\JobDetail\Index.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.RazorTargetAssemblyInfo.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.RazorTargetAssemblyInfo.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.Views.pdb
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.dll
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.pdb
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.csproj.CopyComplete
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\IOTWaterloo_JobBoard.csprojAssemblyReference.cache
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\CompanyDetail\Create.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\CompanyDetail\Delete.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\CompanyDetail\Details.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\CompanyDetail\Edit.cshtml.g.cs
+A:\IoT-Waterloo Job Board\IoT-Waterloo-Job-Board\IOTWaterloo_JobBoard\IOTWaterloo_JobBoard\obj\Debug\netcoreapp2.2\Razor\Views\CompanyDetail\Index.cshtml.g.cs

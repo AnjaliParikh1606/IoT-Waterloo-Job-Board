@@ -5,26 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using IoTWaterloo_JobBoard.Models;
+using IOTWaterloo_JobBoard.Models;
 
-namespace IoTWaterloo_JobBoard.Controllers
+namespace IOTWaterloo_JobBoard.Controllers
 {
-    public class AgencyDetailsController : Controller
+    public class JobDetailController : Controller
     {
         private readonly JobBoardContext _context;
 
-        public AgencyDetailsController(JobBoardContext context)
+        public JobDetailController(JobBoardContext context)
         {
             _context = context;
         }
 
-        // GET: AgencyDetails
+        // GET: JobDetail
         public async Task<IActionResult> Index()
         {
-            return View(await _context.AgencyDetails.ToListAsync());
+            var jobBoardContext = _context.JobDetails.Include(j => j.Compnay);
+            return View(await jobBoardContext.ToListAsync());
         }
 
-        // GET: AgencyDetails/Details/5
+        // GET: JobDetail/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +33,42 @@ namespace IoTWaterloo_JobBoard.Controllers
                 return NotFound();
             }
 
-            var agencyDetails = await _context.AgencyDetails
-                .FirstOrDefaultAsync(m => m.AgencyId == id);
-            if (agencyDetails == null)
+            var jobDetails = await _context.JobDetails
+                .Include(j => j.Compnay)
+                .FirstOrDefaultAsync(m => m.JobId == id);
+            if (jobDetails == null)
             {
                 return NotFound();
             }
 
-            return View(agencyDetails);
+            return View(jobDetails);
         }
 
-        // GET: AgencyDetails/Create
+        // GET: JobDetail/Create
         public IActionResult Create()
         {
+            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId");
             return View();
         }
 
-        // POST: AgencyDetails/Create
+        // POST: JobDetail/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AgencyId,AgencyName,AgencyWebsite,AgencyPhone,AgencyEmail")] AgencyDetails agencyDetails)
+        public async Task<IActionResult> Create([Bind("JobId,JobTitle,Category,Location,Jobtype,MaxSalary,MinSalary,JobDescription,PayPeriod,NumberOfPosition,JobPostDate,JobExpiryDate,CompnayId")] JobDetails jobDetails)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(agencyDetails);
+                _context.Add(jobDetails);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(agencyDetails);
+            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId", jobDetails.CompnayId);
+            return View(jobDetails);
         }
 
-        // GET: AgencyDetails/Edit/5
+        // GET: JobDetail/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,22 +76,23 @@ namespace IoTWaterloo_JobBoard.Controllers
                 return NotFound();
             }
 
-            var agencyDetails = await _context.AgencyDetails.FindAsync(id);
-            if (agencyDetails == null)
+            var jobDetails = await _context.JobDetails.FindAsync(id);
+            if (jobDetails == null)
             {
                 return NotFound();
             }
-            return View(agencyDetails);
+            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId", jobDetails.CompnayId);
+            return View(jobDetails);
         }
 
-        // POST: AgencyDetails/Edit/5
+        // POST: JobDetail/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AgencyId,AgencyName,AgencyWebsite,AgencyPhone,AgencyEmail")] AgencyDetails agencyDetails)
+        public async Task<IActionResult> Edit(int id, [Bind("JobId,JobTitle,Category,Location,Jobtype,MaxSalary,MinSalary,JobDescription,PayPeriod,NumberOfPosition,JobPostDate,JobExpiryDate,CompnayId")] JobDetails jobDetails)
         {
-            if (id != agencyDetails.AgencyId)
+            if (id != jobDetails.JobId)
             {
                 return NotFound();
             }
@@ -96,12 +101,12 @@ namespace IoTWaterloo_JobBoard.Controllers
             {
                 try
                 {
-                    _context.Update(agencyDetails);
+                    _context.Update(jobDetails);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AgencyDetailsExists(agencyDetails.AgencyId))
+                    if (!JobDetailsExists(jobDetails.JobId))
                     {
                         return NotFound();
                     }
@@ -112,10 +117,11 @@ namespace IoTWaterloo_JobBoard.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(agencyDetails);
+            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId", jobDetails.CompnayId);
+            return View(jobDetails);
         }
 
-        // GET: AgencyDetails/Delete/5
+        // GET: JobDetail/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +129,31 @@ namespace IoTWaterloo_JobBoard.Controllers
                 return NotFound();
             }
 
-            var agencyDetails = await _context.AgencyDetails
-                .FirstOrDefaultAsync(m => m.AgencyId == id);
-            if (agencyDetails == null)
+            var jobDetails = await _context.JobDetails
+                .Include(j => j.Compnay)
+                .FirstOrDefaultAsync(m => m.JobId == id);
+            if (jobDetails == null)
             {
                 return NotFound();
             }
 
-            return View(agencyDetails);
+            return View(jobDetails);
         }
 
-        // POST: AgencyDetails/Delete/5
+        // POST: JobDetail/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var agencyDetails = await _context.AgencyDetails.FindAsync(id);
-            _context.AgencyDetails.Remove(agencyDetails);
+            var jobDetails = await _context.JobDetails.FindAsync(id);
+            _context.JobDetails.Remove(jobDetails);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AgencyDetailsExists(int id)
+        private bool JobDetailsExists(int id)
         {
-            return _context.AgencyDetails.Any(e => e.AgencyId == id);
+            return _context.JobDetails.Any(e => e.JobId == id);
         }
     }
 }

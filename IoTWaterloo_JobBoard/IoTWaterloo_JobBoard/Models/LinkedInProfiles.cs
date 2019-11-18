@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IoTWaterloo_JobBoard.Models
+namespace IOTWaterloo_JobBoard.Models
 {
     public partial class LinkedInProfiles
     {

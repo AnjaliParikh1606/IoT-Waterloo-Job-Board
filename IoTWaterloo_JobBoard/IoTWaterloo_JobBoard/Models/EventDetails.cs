@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IoTWaterloo_JobBoard.Models
+namespace IOTWaterloo_JobBoard.Models
 {
     public partial class EventDetails
     {
+        public EventDetails()
+        {
+            RegistrationEventDetails = new HashSet<RegistrationEventDetails>();
+        }
+
         public int EventId { get; set; }
         public string EventName { get; set; }
         public string EventType { get; set; }
@@ -15,5 +20,6 @@ namespace IoTWaterloo_JobBoard.Models
         public string SubscriberEmailId { get; set; }
 
         public virtual WebsiteSubscriber SubscriberEmail { get; set; }
+        public virtual ICollection<RegistrationEventDetails> RegistrationEventDetails { get; set; }
     }
 }

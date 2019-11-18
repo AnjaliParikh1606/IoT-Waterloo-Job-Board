@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IoTWaterloo_JobBoard.Models
+namespace IOTWaterloo_JobBoard.Models
 {
-    public partial class AcountInformation
+    public partial class AccountInformation
     {
-        public AcountInformation()
+        public AccountInformation()
         {
             AgentDetails = new HashSet<AgentDetails>();
             CandidateDetails = new HashSet<CandidateDetails>();
+            CompanyDetails = new HashSet<CompanyDetails>();
         }
 
         public string UserName { get; set; }
@@ -18,5 +19,6 @@ namespace IoTWaterloo_JobBoard.Models
         public virtual Role Role { get; set; }
         public virtual ICollection<AgentDetails> AgentDetails { get; set; }
         public virtual ICollection<CandidateDetails> CandidateDetails { get; set; }
+        public virtual ICollection<CompanyDetails> CompanyDetails { get; set; }
     }
 }

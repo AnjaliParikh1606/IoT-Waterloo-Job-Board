@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace IoTWaterloo_JobBoard.Models
+namespace IOTWaterloo_JobBoard.Models
 {
     public partial class CandidateDetails
     {
@@ -14,6 +14,6 @@ namespace IoTWaterloo_JobBoard.Models
 
         public virtual LinkedInProfiles LinkedIn { get; set; }
         public virtual Resume Resume { get; set; }
-        public virtual AcountInformation UserNameNavigation { get; set; }
+        public virtual AccountInformation UserNameNavigation { get; set; }
     }
 }

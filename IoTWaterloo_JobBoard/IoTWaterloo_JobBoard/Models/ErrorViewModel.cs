@@ -1,6 +1,6 @@
 using System;
 
-namespace IoTWaterloo_JobBoard.Models
+namespace IOTWaterloo_JobBoard.Models
 {
     public class ErrorViewModel
     {

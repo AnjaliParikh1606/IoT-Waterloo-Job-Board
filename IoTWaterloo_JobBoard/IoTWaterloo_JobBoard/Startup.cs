@@ -10,12 +10,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using IoTWaterloo_JobBoard.Data;
+using IOTWaterloo_JobBoard.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using IoTWaterloo_JobBoard.Models;
+using IOTWaterloo_JobBoard.Models;
 
-namespace IoTWaterloo_JobBoard
+namespace IOTWaterloo_JobBoard
 {
     public class Startup
     {
@@ -42,9 +42,10 @@ namespace IoTWaterloo_JobBoard
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddDbContext<JobBoardContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("JobBoardConnetionString")));
+                    Configuration.GetConnectionString("JobBoardConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

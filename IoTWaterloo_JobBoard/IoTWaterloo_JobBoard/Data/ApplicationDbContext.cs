@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace IoTWaterloo_JobBoard.Data
+namespace IOTWaterloo_JobBoard.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
