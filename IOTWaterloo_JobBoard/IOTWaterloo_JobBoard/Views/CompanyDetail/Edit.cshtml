@@ -3,82 +3,80 @@
 @{
     ViewData["Title"] = "Edit";
 }
+    <div class="container">
+        <h4>Edit EmployerDetails</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="CompanyId" />
+                    <div class="form-group">
+                        <label asp-for="CompanyName" class="control-label"></label>
+                        <input asp-for="CompanyName" class="form-control" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyAddress" class="control-label"></label>
+                        <input asp-for="CompanyAddress" class="form-control" />
+                        <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyCity" class="control-label"></label>
+                        <input asp-for="CompanyCity" class="form-control" />
+                        <span asp-validation-for="CompanyCity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyPostalCode" class="control-label"></label>
+                        <input asp-for="CompanyPostalCode" class="form-control" />
+                        <span asp-validation-for="CompanyPostalCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyLandLinePhoneNumber" class="control-label"></label>
+                        <input asp-for="CompanyLandLinePhoneNumber" class="form-control" />
+                        <span asp-validation-for="CompanyLandLinePhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyLandLineExtensionNumber" class="control-label"></label>
+                        <input asp-for="CompanyLandLineExtensionNumber" class="form-control" />
+                        <span asp-validation-for="CompanyLandLineExtensionNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyEmailId" class="control-label"></label>
+                        <input asp-for="CompanyEmailId" class="form-control" />
+                        <span asp-validation-for="CompanyEmailId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyRegistrationDateTime" class="control-label"></label>
+                        <input asp-for="CompanyRegistrationDateTime" class="form-control" />
+                        <span asp-validation-for="CompanyRegistrationDateTime" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompanyContactPerson" class="control-label"></label>
+                        <input asp-for="CompanyContactPerson" class="form-control" />
+                        <span asp-validation-for="CompanyContactPerson" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RoleId" class="control-label"></label>
+                        <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
+                        <span asp-validation-for="RoleId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="UserName" class="control-label"></label>
+                        <select asp-for="UserName" class="form-control" asp-items="ViewBag.UserName"></select>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
 
-<h1>Edit</h1>
-
-<h4>CompanyDetails</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CompanyId" />
-            <div class="form-group">
-                <label asp-for="CompanyName" class="control-label"></label>
-                <input asp-for="CompanyName" class="form-control" />
-                <span asp-validation-for="CompanyName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyAddress" class="control-label"></label>
-                <input asp-for="CompanyAddress" class="form-control" />
-                <span asp-validation-for="CompanyAddress" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyCity" class="control-label"></label>
-                <input asp-for="CompanyCity" class="form-control" />
-                <span asp-validation-for="CompanyCity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyPostalCode" class="control-label"></label>
-                <input asp-for="CompanyPostalCode" class="form-control" />
-                <span asp-validation-for="CompanyPostalCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyLandLinePhoneNumber" class="control-label"></label>
-                <input asp-for="CompanyLandLinePhoneNumber" class="form-control" />
-                <span asp-validation-for="CompanyLandLinePhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyLandLineExtensionNumber" class="control-label"></label>
-                <input asp-for="CompanyLandLineExtensionNumber" class="form-control" />
-                <span asp-validation-for="CompanyLandLineExtensionNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyEmailId" class="control-label"></label>
-                <input asp-for="CompanyEmailId" class="form-control" />
-                <span asp-validation-for="CompanyEmailId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyRegistrationDateTime" class="control-label"></label>
-                <input asp-for="CompanyRegistrationDateTime" class="form-control" />
-                <span asp-validation-for="CompanyRegistrationDateTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyContactPerson" class="control-label"></label>
-                <input asp-for="CompanyContactPerson" class="form-control" />
-                <span asp-validation-for="CompanyContactPerson" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RoleId" class="control-label"></label>
-                <select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select>
-                <span asp-validation-for="RoleId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
-                <select asp-for="UserName" class="form-control" asp-items="ViewBag.UserName"></select>
-                <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        <div>
+            <button class="btn btn-group-lg bg-purple"><a class="text-white text-decoration-none" asp-action="Index">Back to List</a></button>
+        </div>
+   </div>
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

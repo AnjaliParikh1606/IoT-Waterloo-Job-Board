@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/ico" href="~/Images/HeaderLogo.png"/>
+    <link rel="icon" type="image/ico" href="~/Images/HeaderLogo.png" />
     <title> @ViewData["Title"] - IoTWaterloo_JobBoard</title>
 
     <environment include="Development">
@@ -37,25 +37,28 @@
                             <li>
                                 <div class="" style="width:180px;">&nbsp;</div>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top">
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
                             </li>
+                            @*<li class="nav-item  dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                                <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
+                <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+                <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+            </ul>
+                            </li>*@
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Employers</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top">
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Create Employers</a></li>
+                                <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Create">Create Employers</a></li>
                                     <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">View Employers</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top">
+                                <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
                                     <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Index">Create Post</a></li>
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">View Post</a></li>
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetails" asp-action="Index">View Post</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -67,8 +70,12 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Partners</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Compnay</a>
+                            <li class="nav-item  dropdown">
+                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Company</a>
+                                <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Partners">Partners</a></li>
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUS">About Us</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -77,17 +84,16 @@
         </div>
     </header>
     <div>
-        <div class="container">
+        <div>
             <partial name="_CookieConsentPartial" />
-            <main role="main" class="pb-3">
+            <main role="main" @*class="pb-3"*@>
                 @RenderBody()
             </main>
         </div>
     </div>
     <footer id="footer">
         <div id="push"></div>
-        <div class="navBarImage row text-white text-center">
-            
+        <div class="navBarImage row text-white text-center">            
             <div class="col-md-4"> 
             <div>
                 <a>PRIVACY POLICY</a><br/>
@@ -116,17 +122,6 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-        <script>
-            x = $('#div-that-increase-height').height() + 20; // +20 gives space between div and footer
-            y = $(window).height();
-            if (x + 100 <= y) { // 100 is the height of your footer
-                $('#footer').css('top', y - 100 + 'px');// again 100 is the height of your footer
-                $('#footer').css('display', 'block');
-            } else {
-                $('#footer').css('top', x + 'px');
-                $('#footer').css('display', 'block');
-            }
-        </script>
     </environment>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"

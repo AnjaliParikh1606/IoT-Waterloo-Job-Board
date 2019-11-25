@@ -62,6 +62,7 @@ namespace IOTWaterloo_JobBoard.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(companyDetails);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -119,7 +120,7 @@ namespace IOTWaterloo_JobBoard.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details","CompanyDetail",new { @id = companyDetails.CompanyId });
             }
             ViewData["RoleId"] = new SelectList(_context.Role, "RoleId", "PermissionType", companyDetails.RoleId);
             ViewData["UserName"] = new SelectList(_context.AccountInformation, "UserName", "UserName", companyDetails.UserName);

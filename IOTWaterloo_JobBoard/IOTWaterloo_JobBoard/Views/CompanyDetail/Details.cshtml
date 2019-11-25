@@ -3,82 +3,88 @@
 @{
     ViewData["Title"] = "Details";
 }
+    <div class="container">
+       
+        <div>
+            <h4>CompanyDetails</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyName)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyAddress)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyAddress)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyCity)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyCity)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyPostalCode)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyPostalCode)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyLandLinePhoneNumber)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyLandLinePhoneNumber)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyLandLineExtensionNumber)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyLandLineExtensionNumber)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyEmailId)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyEmailId)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyRegistrationDateTime)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyRegistrationDateTime)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.CompanyContactPerson)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.CompanyContactPerson)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Role)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.Role.PermissionType)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.UserNameNavigation)
+                </dt>
+                <dd class="col-sm-5">
+                    @Html.DisplayFor(model => model.UserNameNavigation.UserName)
+                </dd>
+            </dl>
+        </div>
+    <div>
 
-<h1>Details</h1>
-
-<div>
-    <h4>CompanyDetails</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyAddress)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyAddress)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyCity)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyCity)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyPostalCode)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyPostalCode)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyLandLinePhoneNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyLandLinePhoneNumber)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyLandLineExtensionNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyLandLineExtensionNumber)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyEmailId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyEmailId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyRegistrationDateTime)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyRegistrationDateTime)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CompanyContactPerson)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CompanyContactPerson)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Role)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Role.PermissionType)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserNameNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserNameNavigation.UserName)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a> </button>
+            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a> </button>
+            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Index" asp-route-id="@Model.CompanyId">Back to List</a> </button>
+            @*<button class="btn btn-group-lg bg-purple text-white"><a asp-area="" asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a> </button>
+            <button><a class="text-white" asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a> </button>*@
+            @*<a asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a>*@
+ </div>
+ </div>

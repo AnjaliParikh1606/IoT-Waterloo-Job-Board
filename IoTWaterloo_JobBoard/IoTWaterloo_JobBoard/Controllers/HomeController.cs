@@ -19,7 +19,14 @@ namespace IOTWaterloo_JobBoard.Controllers
         {
             return View();
         }
-
+        public IActionResult AboutUS()
+        {
+            return View();
+        }
+        public IActionResult Partners()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

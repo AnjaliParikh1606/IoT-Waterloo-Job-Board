@@ -17,7 +17,7 @@
     width: 100%;
     background-repeat: no-repeat;
 }
-.asideLeft {
+/*.asideLeft {
     padding:0px;
     margin: 20px 130px 0px 50px;
     border: 3px solid;
@@ -45,20 +45,23 @@
     border-color: white;
     width: 500px;
     float: right;
-}
+}*/
 .Icons{
    background-color:transparent;
    height:16px;
    width:16px;
 }
 /* CSS for the pages*/
-
+.bgColor {
+    color: #341646
+}
 #footer {
     position: absolute;
     width: 100%;
     height: 100px;
 }
-
-    #footer, #push {
-        height:200px !important; 
-    }
+ #footer, #push {
+    height:200px !important; 
+ }
+#SliderContainer {
+}
