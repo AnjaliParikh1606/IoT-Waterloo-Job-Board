@@ -12,10 +12,17 @@
 }
 .navBarImage {
     background-image: url("../Images/FooterImage.png");
-    padding-top:10px;
-    height: 200%;
+    padding-top:5px;
+    height: 400%;
     width: 100%;
     background-repeat: no-repeat;
+}
+.sliderImages {
+    width:100%;
+}
+a
+.fontColor {
+    color:black;
 }
 /*.asideLeft {
     padding:0px;
@@ -53,7 +60,21 @@
 }
 /* CSS for the pages*/
 .bgColor {
-    color: #341646
+    background-color: #341646;
+    color:white;
+}
+.links {
+    background-color: #341646;
+    color: white;
+    text-decoration:none;
+}
+.bgColor:hover {
+color:white;
+font-weight:bold;
+}
+.links:hover {
+    color: white;
+   text-decoration:none;
 }
 #footer {
     position: absolute;
@@ -63,5 +84,3 @@
  #footer, #push {
     height:200px !important; 
  }
-#SliderContainer {
-}

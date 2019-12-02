@@ -60,16 +60,25 @@ namespace IOTWaterloo_JobBoard.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CompanyId,CompanyName,CompanyAddress,CompanyCity,CompanyPostalCode,CompanyLandLinePhoneNumber,CompanyLandLineExtensionNumber,CompanyEmailId,CompanyRegistrationDateTime,CompanyContactPerson,RoleId,UserName")] CompanyDetails companyDetails)
         {
-            if (ModelState.IsValid)
+            try 
             {
-                
-                _context.Add(companyDetails);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+
+                    _context.Add(companyDetails);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                ViewData["RoleId"] = new SelectList(_context.Role, "RoleId", "PermissionType", companyDetails.RoleId);
+                ViewData["UserName"] = new SelectList(_context.AccountInformation, "UserName", "UserName", companyDetails.UserName);
+                return View(companyDetails);
+            } catch (Exception Ex)
+            {
+                ViewData["ErrorMessage"] = Ex.GetBaseException().Message;
+                return View(companyDetails);
             }
-            ViewData["RoleId"] = new SelectList(_context.Role, "RoleId", "PermissionType", companyDetails.RoleId);
-            ViewData["UserName"] = new SelectList(_context.AccountInformation, "UserName", "UserName", companyDetails.UserName);
-            return View(companyDetails);
+            
+           
         }
 
         // GET: CompanyDetail/Edit/5
@@ -102,29 +111,40 @@ namespace IOTWaterloo_JobBoard.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
-                try
+
+            try {
+                if (ModelState.IsValid)
                 {
-                    _context.Update(companyDetails);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CompanyDetailsExists(companyDetails.CompanyId))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(companyDetails);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!CompanyDetailsExists(companyDetails.CompanyId))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction("Details", "CompanyDetail", new { @id = companyDetails.CompanyId });
                 }
-                return RedirectToAction("Details","CompanyDetail",new { @id = companyDetails.CompanyId });
+                ViewData["RoleId"] = new SelectList(_context.Role, "RoleId", "PermissionType", companyDetails.RoleId);
+                ViewData["UserName"] = new SelectList(_context.AccountInformation, "UserName", "UserName", companyDetails.UserName);
+                return View(companyDetails);
             }
-            ViewData["RoleId"] = new SelectList(_context.Role, "RoleId", "PermissionType", companyDetails.RoleId);
-            ViewData["UserName"] = new SelectList(_context.AccountInformation, "UserName", "UserName", companyDetails.UserName);
-            return View(companyDetails);
+            catch (Exception Ex)
+            {
+
+                ViewData["ErrorMessage"] = Ex.GetBaseException().Message;
+                return View("Create", "CompanyDetails");
+            }
+
+            
         }
 
         // GET: CompanyDetail/Delete/5

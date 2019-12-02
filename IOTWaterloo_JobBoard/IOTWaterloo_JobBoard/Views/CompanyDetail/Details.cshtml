@@ -3,88 +3,96 @@
 @{
     ViewData["Title"] = "Details";
 }
-    <div class="container">
-       
-        <div>
-            <h4>CompanyDetails</h4>
-            <hr />
+<div>
+    &nbsp;
+    <h4 class="text-center">Company Details</h4>
+    <hr />
+</div>
+
+<div class="container">
+    <div class="container-fluid">
+        <div class="border rounded font-weight-bold text-justify p-4 ">
+
             <dl class="row">
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyName)
+                    @*@Html.DisplayNameFor(model => model.CompanyName)*@ Company Name
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyName)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyAddress)
+                    @*@Html.DisplayNameFor(model => model.CompanyAddress) Company*@ Address
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyAddress)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyCity)
+                    @*@Html.DisplayNameFor(model => model.CompanyCity)*@ City
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyCity)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyPostalCode)
+                    @*@Html.DisplayNameFor(model => model.CompanyPostalCode)*@ Postal Code
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyPostalCode)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyLandLinePhoneNumber)
+                    @*@Html.DisplayNameFor(model => model.CompanyLandLinePhoneNumber)*@ Phone Number
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyLandLinePhoneNumber)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyLandLineExtensionNumber)
+                    @*@Html.DisplayNameFor(model => model.CompanyLandLineExtensionNumber)*@ Extension(If Required)
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyLandLineExtensionNumber)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyEmailId)
+                    @*@Html.DisplayNameFor(model => model.CompanyEmailId)*@ Email Id
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyEmailId)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyRegistrationDateTime)
+                    @*@Html.DisplayNameFor(model => model.CompanyRegistrationDateTime)*@ Registration DateTime
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyRegistrationDateTime)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.CompanyContactPerson)
+                    @*@Html.DisplayNameFor(model => model.CompanyContactPerson)*@ Contact Person
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.CompanyContactPerson)
                 </dd>
                 <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.Role)
+                    @*@Html.DisplayNameFor(model => model.Role)*@ Company Role
                 </dt>
                 <dd class="col-sm-5">
                     @Html.DisplayFor(model => model.Role.PermissionType)
                 </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.UserNameNavigation)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.UserNameNavigation.UserName)
-                </dd>
+                @*<dt class="col-sm-5">
+                        @Html.DisplayNameFor(model => model.UserNameNavigation)
+                    </dt>
+                    <dd class="col-sm-5">
+                        @Html.DisplayFor(model => model.UserNameNavigation.UserName)
+                    </dd>*@
             </dl>
-        </div>
-    <div>
-
-            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a> </button>
-            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a> </button>
+            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a> </button> |
+            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a> </button> |
             <button class="btn btn-group-lg bg-purple " style="background-color:#341646;"><a class="text-white text-decoration-none" asp-area="" asp-action="Index" asp-route-id="@Model.CompanyId">Back to List</a> </button>
-            @*<button class="btn btn-group-lg bg-purple text-white"><a asp-area="" asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a> </button>
-            <button><a class="text-white" asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a> </button>*@
-            @*<a asp-action="Edit" asp-route-id="@Model.CompanyId">Edit</a>
-            <a asp-action="Delete" asp-route-id="@Model.CompanyId">Delete</a>*@
- </div>
- </div>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+

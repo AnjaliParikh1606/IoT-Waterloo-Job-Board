@@ -20,67 +20,70 @@
     <link href="~/css/LayoutStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <header>       
-        <div class="Image float-left img-fluid" >
-            <div class="navbar-expand-md"> </div>
-            <!-- <img class="iconeSyle" src="~/Images/iotWaterloo-logo-2.png" />-->
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3">
-                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="container float-right" style="padding-top:10px; font-size:26px;">
-                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row" >
-                        <!--   <partial name="_LoginPartial" /> -->
-                        
-                        <ul class="navbar-nav flex-grow-1">
-                            <li>
-                                <div class="" style="width:180px;">&nbsp;</div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
-                            </li>
-                            @*<li class="nav-item  dropdown">
-                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
-                <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
-                <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
-            </ul>
-                            </li>*@
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Employers</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Create">Create Employers</a></li>
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">View Employers</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Index">Create Post</a></li>
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetails" asp-action="Index">View Post</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Talent</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" style="width:178px;" asp-area="" asp-controller="Home" asp-action="Index">Event & News</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Partners</a>
-                            </li>
-                            <li class="nav-item  dropdown">
-                                <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Company</a>
-                                <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Partners">Partners</a></li>
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUS">About Us</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+    <header>
+        <div class="container-fluid p-0 m-0">
+            <div class="Image float-left img-fluid">
+                <div class="navbar-expand-md"> </div>
+                <!-- <img class="iconeSyle" src="~/Images/iotWaterloo-logo-2.png" />-->
+                <nav class="navbar navbar-expand-sm navbar-expand-md navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3">
+                    <div class="text-black-50">
+                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation bg-dark">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
-                </div>
-            </nav>
+                    <div class="container float-right" style="padding-top:10px; font-size:26px;">
+                        <div class="navbar-collapse container-fluid collapse d-sm-inline-flex flex-sm-row">
+                            <!--   <partial name="_LoginPartial" /> -->
+                            <ul class="navbar-nav flex-grow-1">
+                                <li>
+                                    <div class="" style="width:180px;"> &nbsp;&nbsp;</div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                                </li>
+                                @*<li class="nav-item  dropdown">
+                                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                                                    <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+                                </ul>
+                                </li>*@
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Employers</a>
+                                    <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
+                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Create">Create Employers</a></li>
+                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">View Employers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
+                                    <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
+                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Create">Create Post</a></li>
+                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Index">View Post</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Talent</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" style="width:178px;" asp-area="" asp-controller="Home" asp-action="Index">Event & News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Partners</a>
+                                </li>
+                                <li class="nav-item  dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Company</a>
+                                    <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
+                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Partners">Partners</a></li>
+                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUS">About Us</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
     <div>
@@ -92,31 +95,35 @@
         </div>
     </div>
     <footer id="footer">
-        <div id="push"></div>
-        <div class="navBarImage row text-white text-center">            
-            <div class="col-md-4"> 
-            <div>
-                <a>PRIVACY POLICY</a><br/>
-                <a>TERMS & CONDITIONS</a><br />
-                <a>ABOUT</a>
-                  </div></div>
-             <div class="col-md-4"><h3>Internet Of Things Waterloo Region</h3>
-                                        <h4> Co-Creating The Future</h4>
-                                        <div>
-                                             <img src="~/Images/facebook.png" />
-                                             <img src="~/Images/InstagramIcon.png" />
-                                             <img src="~/Images/twitter.png" />
-                                             <img src="~/Images/Youtube.png" />
-                                         </div>                                                                                             
+        <div class="p-0 m-0">
+            <div id="push"></div>
+            <div class="navBarImage row text-white text-center">
+                <div class="col-md-4">
+                    <div>
+                        <a>PRIVACY POLICY</a><br />
+                        <a>TERMS & CONDITIONS</a><br />
+                        <a>ABOUT</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Internet Of Things Waterloo Region</h3>
+                    <h4> Co-Creating The Future</h4>
+                    <div>
+                        <img src="~/Images/facebook.png" />
+                        <img src="~/Images/InstagramIcon.png" />
+                        <img src="~/Images/twitter.png" />
+                        <img src="~/Images/Youtube.png" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <a>CONTACT</a><br />
+                        <a>PARTNERS</a><br />
+                        <a>NEWS</a>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="col-md-4">
-            <div>
-                <a>CONTACT</a><br />
-                <a>PARTNERS</a><br />
-                <a>NEWS</a>
-                 </div> </div>
-           
-        </div>
     </footer>
 
     <environment include="Development">

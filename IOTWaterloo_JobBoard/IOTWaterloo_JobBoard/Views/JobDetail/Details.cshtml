@@ -3,89 +3,104 @@
 @{
     ViewData["Title"] = "Details";
 }
-    <div class="container">
-        <h1>Details</h1>
+    <div>
+        &nbsp;
+        <h4 class="text-center">Details of Job Details</h4>
+        <hr />
+    </div>
+<div class="container">
+    <div>
 
-        <div>
-            <h4>JobDetails</h4>
-            <hr />
-            <dl class="row">
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.JobTitle)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.JobTitle)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.Category)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.Category)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.Location)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.Location)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.Jobtype)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.Jobtype)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.MaxSalary)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.MaxSalary)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.MinSalary)
-                </dt>
-                <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.MinSalary)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.JobDescription)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.JobDescription)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.PayPeriod)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.PayPeriod)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.NumberOfPosition)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.NumberOfPosition)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.JobPostDate)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.JobPostDate)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.JobExpiryDate)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.JobExpiryDate)
-                </dd>
-                <dt class="col-sm-5">
-                    @Html.DisplayNameFor(model => model.Compnay)
-                </dt>
-                <dd class="col-sm-5">
-                    @Html.DisplayFor(model => model.Compnay.CompanyId)
-                </dd>
-            </dl>
+        <div class="container">
+            <div class="container-fluid">
+                <div class="border rounded font-weight-bold text-justify p-4 ">
+                    <div class="row">
+                        <div class="col-md-11">
+
+                            <dl class="row">
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.JobTitle)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.JobTitle)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.Category)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.Category)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.Location)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.Location)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.Jobtype)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.Jobtype)
+                                </dd>
+                                @*<dt class="col-sm-5">
+                                        @Html.DisplayNameFor(model => model.MaxSalary)
+                                    </dt>
+                                    <dd class="col-sm-5">
+                                        @Html.DisplayFor(model => model.MaxSalary)
+                                    </dd>
+                                    <dt class="col-sm-5">
+                                        @Html.DisplayNameFor(model => model.MinSalary)
+                                    </dt>
+                                    <dd class="col-sm-10">
+                                        @Html.DisplayFor(model => model.MinSalary)
+                                    </dd>*@
+
+                                @*<dt class="col-sm-5">
+                                        @Html.DisplayNameFor(model => model.PayPeriod)
+                                    </dt>
+                                    <dd class="col-sm-5">
+                                        @Html.DisplayFor(model => model.PayPeriod)
+                                    </dd>*@
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.NumberOfPosition)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.NumberOfPosition)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.JobPostDate)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.JobPostDate)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.JobExpiryDate)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.JobExpiryDate)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.Compnay)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.Compnay.CompanyName)
+                                </dd>
+                                <dt class="col-sm-5">
+                                    @Html.DisplayNameFor(model => model.JobDescription)
+                                </dt>
+                                <dd class="col-sm-5">
+                                    @Html.DisplayFor(model => model.JobDescription)
+                                </dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <button class="btn btn-group-lg bg-purple"><a class="text-white text-decoration-none" asp-action="Edit" asp-route-id="@Model.JobId">Edit</a> </button> |
+                            <button class="btn btn-group-lg bg-purple"><a class="text-white text-decoration-none" asp-action="Delete" asp-route-id="@Model.JobId">Delete</a> </button> |
+                            <button class="btn btn-group-lg bg-purple"><a class="text-white text-decoration-none" asp-action="Index">Back to List</a> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <button class="btn btn-group-lg bg-purple"><a class="text-white text-decoration-none" asp-action="Edit" asp-route-id="@Model.JobId">Edit</a> </button>|
-            <button class="btn btn-group-lg bg-purple"><a class="text-white text-decoration-none" asp-action="Index">Back to List</a> </button>
-        </div>
+    </div>
 </div>

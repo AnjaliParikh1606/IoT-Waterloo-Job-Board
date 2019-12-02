@@ -33,12 +33,12 @@ namespace IOTWaterloo_JobBoard.Models
         public virtual DbSet<WebsiteSubscriber> WebsiteSubscriber { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=(localDB)\\MsSQLLocalDB;Database=JobBoard;Trusted_Connection=True;");
-            }
+       {
+//            if (!optionsBuilder.IsConfigured)
+//            {
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+//                optionsBuilder.UseSqlServer("Server=(localDB)\\MsSQLLocalDB;Database=JobBoard;Trusted_Connection=True;");
+//            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -313,14 +313,12 @@ namespace IOTWaterloo_JobBoard.Models
                 entity.Property(e => e.JobId).HasColumnName("jobId");
 
                 entity.Property(e => e.Category)
-                    .IsRequired()
                     .HasColumnName("category")
                     .HasMaxLength(50);
 
                 entity.Property(e => e.CompnayId).HasColumnName("compnayId");
 
                 entity.Property(e => e.JobDescription)
-                    .IsRequired()
                     .HasColumnName("jobDescription")
                     .HasMaxLength(500);
 
@@ -333,17 +331,14 @@ namespace IOTWaterloo_JobBoard.Models
                     .HasColumnType("datetime");
 
                 entity.Property(e => e.JobTitle)
-                    .IsRequired()
                     .HasColumnName("jobTitle")
                     .HasMaxLength(50);
 
                 entity.Property(e => e.Jobtype)
-                    .IsRequired()
                     .HasColumnName("jobtype")
                     .HasMaxLength(50);
 
                 entity.Property(e => e.Location)
-                    .IsRequired()
                     .HasColumnName("location")
                     .HasMaxLength(50);
 

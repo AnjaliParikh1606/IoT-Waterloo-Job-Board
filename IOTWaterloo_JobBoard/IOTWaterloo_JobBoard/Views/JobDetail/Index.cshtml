@@ -3,13 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <div class="container">
-        <h1>Index</h1>
+<div>&nbsp;</div>
+<h4 class="text-center">Job Posting List</h4>
+<hr />
 
-        <p>
-            <a asp-action="Create">Create New</a>
-        </p>
-        <table class="table">
+<div class="container">
+    <div>&nbsp;</div>
+    @*<table class="table">
             <thead>
                 <tr>
                     <th>
@@ -56,40 +56,40 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.JobTitle)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobTitle)</a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Category)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.Category) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Location)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.Location) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Jobtype)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.Jobtype) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.MaxSalary)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.MaxSalary) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.MinSalary)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.MinSalary) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.JobDescription)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobDescription) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.PayPeriod)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.PayPeriod) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.NumberOfPosition)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.NumberOfPosition) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.JobPostDate)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobPostDate) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.JobExpiryDate)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobExpiryDate) </a>
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Compnay.CompanyId)
+                            <a class="text-black-50 text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.Compnay.CompanyId) </a>
                         </td>
                         <td>
                             <a asp-action="Edit" asp-route-id="@item.JobId">Edit</a> |
@@ -99,5 +99,40 @@
                     </tr>
                 }
             </tbody>
-        </table>
+        </table>*@
+
+
+    <div>
+        <div class="container-fluid">
+            <form method="post" class="form-inline">
+                @foreach (var item in Model)
+                {
+                    <div class="card bg-dark col-12 p-0">
+                        <div class="card-header border rounded font-weight-bold text-justify p-4 ">
+
+                            <a class="card-title text-white text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobTitle)</a>
+                            <button class="border border-white bg-dark float-right"> <a class="card-group text-white text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> Go</a></button>
+                            <table class="text-white">
+                                <tr colspan="3">
+                                    <th class="pr-5">
+                                        <a class="card-text text-white text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.Location) </a>
+                                    </th>
+                                    <th class="pr-5">
+                                        <a class="card-text text-white text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.Jobtype) </a>
+                                    </th>
+                                    <th class="pr-5">
+                                        <a class=" card-text text-white text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobPostDate) </a>
+                                    </th>
+                                </tr>
+
+                            </table>
+                            <a class="card-group text-white text-decoration-none" asp-action="details" asp-controller="JobDetail" asp-route-id="@item.JobId"> @Html.DisplayFor(modelItem => item.JobDescription) </a>
+
+                        </div>
+                    </div>
+                    <br />
+                }
+            </form>
+        </div>
+    </div>
 </div>

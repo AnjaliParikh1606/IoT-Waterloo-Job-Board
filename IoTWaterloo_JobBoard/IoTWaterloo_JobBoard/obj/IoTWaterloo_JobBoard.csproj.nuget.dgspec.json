@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IoTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj": {}
+    "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj": {}
   },
   "projects": {
-    "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IoTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj": {
+    "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IoTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj",
+        "projectUniqueName": "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj",
         "projectName": "IOTWaterloo_JobBoard",
-        "projectPath": "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IoTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj",
+        "projectPath": "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IoTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\obj\\",
+        "outputPath": "A:\\IoT-Waterloo Job Board\\IoT-Waterloo-Job-Board\\IOTWaterloo_JobBoard\\IOTWaterloo_JobBoard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

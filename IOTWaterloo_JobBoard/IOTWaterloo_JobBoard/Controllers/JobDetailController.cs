@@ -47,7 +47,8 @@ namespace IOTWaterloo_JobBoard.Controllers
         // GET: JobDetail/Create
         public IActionResult Create()
         {
-            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId");
+            //ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId");
+            ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
             return View();
         }
 
@@ -58,14 +59,24 @@ namespace IOTWaterloo_JobBoard.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("JobId,JobTitle,Category,Location,Jobtype,MaxSalary,MinSalary,JobDescription,PayPeriod,NumberOfPosition,JobPostDate,JobExpiryDate,CompnayId")] JobDetails jobDetails)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(jobDetails);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(jobDetails);
+                    await _context.SaveChangesAsync();
+                    TempData["DisplayMessage"] = "Job Successfully Posted";
+                    return RedirectToAction(nameof(Create));
+                }
+                ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
+                return View(jobDetails);
             }
-            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId", jobDetails.CompnayId);
-            return View(jobDetails);
+            catch (Exception Ex)
+            {
+                ViewData["ErrorMessage"] = Ex.GetBaseException().Message;
+                ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
+                return View(jobDetails);
+            }
         }
 
         // GET: JobDetail/Edit/5
@@ -75,13 +86,12 @@ namespace IOTWaterloo_JobBoard.Controllers
             {
                 return NotFound();
             }
-
             var jobDetails = await _context.JobDetails.FindAsync(id);
             if (jobDetails == null)
             {
                 return NotFound();
             }
-            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId", jobDetails.CompnayId);
+            ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
             return View(jobDetails);
         }
 
@@ -97,28 +107,38 @@ namespace IOTWaterloo_JobBoard.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(jobDetails);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!JobDetailsExists(jobDetails.JobId))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(jobDetails);
+                        await _context.SaveChangesAsync();
+                        ViewData["DisplayMessage"] = "Job Updated Successfully";
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!JobDetailsExists(jobDetails.JobId))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
+                ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
+                return View(jobDetails);
+            }catch(Exception Ex)
+            {
+                ViewData[""] = Ex.GetBaseException().Message;
+                ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
+                return View(jobDetails);
+
             }
-            ViewData["CompnayId"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyId", jobDetails.CompnayId);
-            return View(jobDetails);
         }
 
         // GET: JobDetail/Delete/5
