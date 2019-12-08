@@ -1,0 +1,179 @@
+﻿@model IOTWaterloo_JobBoard.ViewModel.CandidateViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    .margin-left {
+        margin-left: 15px !important;
+    }
+</style>
+
+@*<script>
+    $(function () {
+        $("#privacy").modal();
+    });
+
+    /**/</script>*@
+@*<h1>Details</h1>*@
+
+@if ((bool?)TempData["success"] == true)
+{
+    <div class="alert alert-success">
+        <strong>Success!</strong> your profile has been submitted succesfully.
+    </div>
+}
+
+<!-- Trigger the modal with a button -->
+@*<h4>JobDetails</h4>*@
+<!-- Modal -->
+
+<div>&nbsp; <br /> &nbsp;</div>
+<div class="container">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Upload Files</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form asp-action="Upload" asp-controller="Talent" id="frmUpload" enctype="multipart/form-data" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label class="control-label">First Name</label>
+                            <input asp-for="@Model.FirstName" class="form-control" />
+                            <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Last Name</label>
+                            <input asp-for="@Model.LastName" class="form-control" />
+                            <input asp-for="@Model.jobDetails.JobId" class="form-control" style="display:none;" />
+                            <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <div class="custom-file form-control">
+
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" onchange="readURL(this);"
+                                           aria-describedby="inputGroupFileAddon01" asp-for="@Model.Document" required>
+                                    <label class="custom-file-label" for="inputGroupFile01" id="chooseStyle">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">LinkedIn URL</label>
+                            <input asp-for="@Model.URL" class="form-control" required />
+
+                        </div>
+                        <input type="hidden" asp-for="@Model.jobDetails.Compnay.CompanyName" />
+                        <input type="hidden" asp-for="@Model.jobDetails.Compnay.CompanyId" />
+                        <input type="hidden" asp-for="@Model.jobDetails.JobTitle" />
+                        <input type="hidden" asp-for="@Model.jobDetails.Category" />
+                        <input type="hidden" asp-for="@Model.jobDetails.Jobtype" />
+                        <input type="hidden" asp-for="@Model.jobDetails.JobDescription" />
+                        <input type="hidden" asp-for="@Model.jobDetails.JobPostDate" value="@DateTime.Now" />
+                        <input type="hidden" asp-for="@Model.jobDetails.JobExpiryDate" />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Upload" class="btn btn-dark bgColor" form="frmUpload" />
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    @*</div>*@
+
+
+    <div class="card mb-3" style="background-color: #faf3e8;">
+        <div class="card-header">Job Details</div>
+        <div class="card-body">
+            @*<h5 class="card-title">Dark card title</h5>*@
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.JobTitle): </p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.JobTitle)</p>
+            </div>
+
+            @*<div class="d-flex w-100">
+                    <p class="card-text">  @Html.DisplayNameFor(model => model.jobDetails.Compnay)</p>
+                    <p class="card-text margin-left">  @Html.DisplayFor(model => model.jobDetails.Compnay)</p>
+                </div>*@
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.Location)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.Location)</p>
+            </div>
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.Category)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.Category)</p>
+            </div>
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.Jobtype)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.Jobtype)</p>
+            </div>
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.JobDescription)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.Jobtype)</p>
+            </div>
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.JobPostDate)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.JobPostDate)</p>
+            </div>
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.JobExpiryDate)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.JobExpiryDate)</p>
+            </div>
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.NumberOfPosition)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.NumberOfPosition)</p>
+            </div>
+
+            <div class="d-flex w-100 row">
+                <p class="card-text col-sm-6">  @Html.DisplayNameFor(model => model.jobDetails.Compnay.CompanyName)</p>
+                <p class="card-text col-sm-6">  @Html.DisplayFor(model => model.jobDetails.Compnay.CompanyName)</p>
+            </div>
+
+            @*<div class="d-flex w-100">
+                    <p class="card-text">  @Html.DisplayNameFor(model => model.jobDetails.PayPeriod)</p>
+                    <p class="card-text margin-left">  @Html.DisplayFor(model => model.jobDetails.PayPeriod)</p>
+                </div>*@
+
+
+        </div>
+    </div>
+    <div>&nbsp; <br /> &nbsp;</div>
+    <button type="button" class="btn bgColor btn-lg form-group" data-toggle="modal" data-target="#myModal">
+        <span class="bgColor glyphicon glyphicon-eye-open"></span>APPLY
+    </button>
+    <button type="button" class="btn bgColor btn-lg form-group" data-toggle="modal" data-target="#myModal">
+        <a class="text-white text-decoration-none" href="/home/JobSearch">Back to Search</a>
+    </button>
+
+    <div>
+        @*<a asp-action="Edit" asp-route-id="@Model.jobDetails.JobId">Edit</a>*@
+        <div>&nbsp; <br /> &nbsp;</div>
+    </div>
+</div>
+<script>
+    function readURL(input) {
+        $('#chooseStyle').text(input.files[0].name);
+    }
+</script>

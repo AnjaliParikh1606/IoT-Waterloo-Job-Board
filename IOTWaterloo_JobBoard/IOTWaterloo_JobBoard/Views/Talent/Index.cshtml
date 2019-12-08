@@ -1,0 +1,122 @@
+﻿@model IEnumerable<IOTWaterloo_JobBoard.Models.JobDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PayPeriod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobPostDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobExpiryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compnay)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>*@
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+
+        @*<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                <div class="d-flex w-100 justify-content-between">
+                     <a asp-area="" asp-controller="JobDetail" asp-action="Details" asp-route-id="@item.JobId" >
+            <h5 class="mb-1"> @Html.DisplayFor(modelItem => item.JobTitle)</h5></a>
+                    <small> @Html.DisplayFor(modelItem => item.JobPostDate)</small>
+                </div>
+                <p class="mb-1">   @Html.DisplayFor(modelItem => item.JobDescription)</p>
+                <small> @Html.DisplayFor(modelItem => item.Location)</small>
+            </a>*@
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">@Html.DisplayFor(modelItem => item.JobTitle)</h5>
+                    <small>@Html.DisplayFor(modelItem => item.JobPostDate)</small>
+                </div>
+                <p class="mb-1">@Html.DisplayFor(modelItem => item.JobDescription)</p>
+                @*<small>Donec id elit non mi porta.</small>*@
+            </a>
+
+        </div>
+        @*<tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jobtype)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxSalary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinSalary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PayPeriod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfPosition)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobPostDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobExpiryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Compnay.CompanyId)
+                </td>
+
+            </tr>*@
+    }
+</div>
+@*</tbody>
+    </table>*@

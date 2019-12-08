@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace IOTWaterloo_JobBoard.Models
 {
+
+    /// <summary>
+    /// Author:Anjali Parikh
+    /// </summary>
     [ModelMetadataType(typeof(CompanyDetailsmetadata))]
     public partial class CompanyDetails : IValidatableObject
     {
@@ -18,7 +22,7 @@ namespace IOTWaterloo_JobBoard.Models
 
             if (string.IsNullOrEmpty(CompanyName))
                 yield return new ValidationResult("Company Name must required");
-
+           
             yield return ValidationResult.Success;
         }
     }
@@ -35,8 +39,10 @@ namespace IOTWaterloo_JobBoard.Models
         public string CompanyAddress { get; set; }
         public string CompanyCity { get; set; }
         public string CompanyPostalCode { get; set; }
+        [DataType(DataType.PhoneNumber)]
         public string CompanyLandLinePhoneNumber { get; set; }
         public string CompanyLandLineExtensionNumber { get; set; }
+        [DataType(DataType.EmailAddress)]
         public string CompanyEmailId { get; set; }
         public DateTime? CompanyRegistrationDateTime { get; set; }
         public string CompanyContactPerson { get; set; }

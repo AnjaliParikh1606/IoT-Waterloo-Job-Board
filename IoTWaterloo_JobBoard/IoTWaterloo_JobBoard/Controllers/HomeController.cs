@@ -10,12 +10,26 @@ namespace IOTWaterloo_JobBoard.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly JobBoardContext _context;
+        public HomeController(JobBoardContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
         }
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+        public IActionResult JobSearch()
+        {
+            var jobDetails = _context.JobDetails.Take(5);
+            return View(jobDetails);
+        }
 
-        public IActionResult Privacy()
+         public IActionResult Privacy()
         {
             return View();
         }

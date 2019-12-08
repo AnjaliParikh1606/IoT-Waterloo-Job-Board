@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace IOTWaterloo_JobBoard.Models
 {
@@ -10,6 +11,7 @@ namespace IOTWaterloo_JobBoard.Models
             CandidateDetails = new HashSet<CandidateDetails>();
         }
 
+        [Key]
         public int LinkedInId { get; set; }
         public string ProfilrUrl { get; set; }
 

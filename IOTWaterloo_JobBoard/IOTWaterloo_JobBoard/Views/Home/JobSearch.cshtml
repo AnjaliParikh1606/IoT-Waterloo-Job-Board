@@ -1,0 +1,451 @@
+﻿@{
+    ViewData["Title"] = "Talent Page";
+}
+    <div class="container">
+        <style>
+            .twitter-typeahead {
+                width: 100% !important;
+            }
+        </style>
+        <style type="text/css">
+            .bs-example {
+                font-family: sans-serif;
+                position: relative;
+                margin: 100px;
+            }
+
+            .typeahead {
+                background-color: #faf3e8;
+            }
+
+                .typeahead:focus {
+                    border: 2px solid #0097CF;
+                }
+
+            .tt-query {
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+            }
+
+            .tt-hint {
+                color: #999999;
+            }
+
+            .tt-menu {
+                background-color: #FFFFFF;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                margin-top: 12px;
+                padding: 8px 0;
+                width: 422px;
+            }
+
+            .tt-suggestion {
+                font-size: 22px; /* Set suggestion dropdown font size */
+                padding: 3px 20px;
+            }
+
+                .tt-suggestion:hover {
+                    cursor: pointer;
+                    background-color: #0097CF;
+                    color: #FFFFFF;
+                }
+
+                .tt-suggestion p {
+                    margin: 0;
+                }
+
+            #ex1Slider .slider-selection {
+                background: #BABABA;
+            }
+
+            .slider.slider-horizontal {
+                width: 160px;
+            }
+        </style>
+        <style>
+
+            body {
+                font-family: 'Open Sans', 'sans-serif';
+                background-color: #faf3e8;
+            }
+
+            h1,
+            .h1 {
+                font-size: 36px;
+                text-align: center;
+                font-size: 5em;
+                color: #404041;
+            }
+
+            .navbar-nav > li > .dropdown-menu {
+                margin-top: 20px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+
+            .navbar-default .navbar-nav > li > a {
+                width: 200px;
+                font-weight: bold;
+            }
+
+            .mega-dropdown {
+                position: static !important;
+                width: 100%;
+            }
+
+            .mega-dropdown-menu {
+                padding: 20px 0px;
+                width: 100%;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                height: 174px;
+            }
+
+                .mega-dropdown-menu:before {
+                    content: "";
+                    border-bottom: 15px solid #fff;
+                    border-right: 17px solid transparent;
+                    border-left: 17px solid transparent;
+                    position: absolute;
+                    top: -15px;
+                    left: 285px;
+                    z-index: 10;
+                }
+
+                .mega-dropdown-menu:after {
+                    content: "";
+                    border-bottom: 17px solid #ccc;
+                    border-right: 19px solid transparent;
+                    border-left: 19px solid transparent;
+                    position: absolute;
+                    top: -17px;
+                    left: 283px;
+                    z-index: 8;
+                }
+
+                .mega-dropdown-menu > li > ul {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                    .mega-dropdown-menu > li > ul > li {
+                        list-style: none;
+                    }
+
+                        .mega-dropdown-menu > li > ul > li > a {
+                            display: block;
+                            padding: 3px 20px;
+                            clear: both;
+                            font-weight: normal;
+                            line-height: 1.428571429;
+                            color: #999;
+                            white-space: normal;
+                        }
+
+                .mega-dropdown-menu > li ul > li > a:hover,
+                .mega-dropdown-menu > li ul > li > a:focus {
+                    text-decoration: none;
+                    color: #444;
+                    background-color: #f5f5f5;
+                }
+
+                .mega-dropdown-menu .dropdown-header {
+                    color: #428bca;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .mega-dropdown-menu form {
+                    margin: 3px 20px;
+                }
+
+                .mega-dropdown-menu .form-group {
+                    margin-bottom: 3px;
+                }
+
+            .navbar-nav .dropdown-menu {
+                background-color: #fff;
+            }
+        </style>
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <div class="row text-center form-group"></div>
+        <div>&nbsp; <br /> &nbsp;</div>
+        <div><h3>Search Desire Jobs</h3></div>
+        <hr />
+        <div class="container">
+            <div class="border rounded font-weight-bold p-4">
+                <div class="row">
+                    <div class="col-md-6">
+
+
+
+
+                        <div class="container" style="background-color:#faf3e8">
+                            <div>
+                                <div class="form-group  col-md-5">
+                                    <label for="exampleInputEmail1" style="width:100%">Job Title<span class="text-danger">*</span></label>
+                                    <input id="JobSearch" class="typeahead tt-query form-control" spellcheck="false" type="text" placeholder="" style="width:100%">
+                                    @*<small id="emailHelp" class="form-text text-muted"  style="width:100%">job title, keywords, or company</small>*@
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="exampleInputEmail2" style="width:100%">Location</label>
+                                    <input id="Countries" class=" form-control" type="text" placeholder="" style="width:100%">
+                                    @*<small id="emailHelp" class="form-text text-muted" style="width:100%">city or province</small>*@
+                                </div>
+                            </div>
+                            <div class="form-group col-md-2" style="width:100%;text-align:right;">
+                                <label style="visibility:hidden">unlknallaldmaslkdmlasmdlamyy</label>
+                                <button class="btn bgColor" onclick="SearchJobs()">Find Jobs</button>
+                            </div>
+
+                            <div class="container row" style="margin-top:10px;">
+                                <nav class="navbar navbar-default col-md-12">
+                                    <div class="collapse navbar-collapse js-navbar-collapse">
+                                        <ul class="nav navbar-nav col-md-12">
+                                            <li class="dropdown mega-dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter on jobs</a>
+
+                                                <ul class="dropdown-menu mega-dropdown-menu row">
+
+                                                    <li class="col-sm-3">
+                                                        <ul>
+                                                            <li class="dropdown-header">Job Type</li>
+                                                            <li>
+                                                                <input type="checkbox" name="rbjobtype" value="Full-Time" for="Jobtype" class="check" id="parttime">
+                                                                <span for="parttime">Part-Time</span>
+
+                                                            </li>
+                                                            <li>
+                                                                <input type="checkbox" name="rbjobtype" value="Part-Time" for="Jobtype" class="check" id="fulltime">
+                                                                <span for="fulltime">Full-Time</span>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    @*<li class="col-sm-5">
+                                                        <ul>
+                                                            <li class="dropdown-header">Minimum Salary-Maximum Salary</li>
+                                                            <li><a href="#" onclick="SearchSalary(60000,110000)">60000$- 110000$</a></li>
+                                                            <li><a href="#" onclick="SearchSalary(110000,150000)">110000$- 150000$</a></li>
+                                                            <li><a href="#" onclick="SearchSalary(150000,'200000')">110000$- 200000$</a></li>
+                                                        </ul>
+                                                    </li>*@
+
+                                                    <li class="col-sm-6">
+                                                        <ul>
+                                                            <li class="dropdown-header">Search By </li>
+                                                            <li><a href="#" onclick="SearchBy(2)">Recent</a></li>
+                                                            <li><a href="#" onclick="SearchBy(0)">Last Week</a></li>
+                                                            <li><a href="#" onclick="SearchBy(1)">Last Month</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <!-- /.nav-collapse -->
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>&nbsp; <br /> &nbsp;</div>
+        <div>&nbsp; <br /> &nbsp;</div>
+        <div>&nbsp; <br /> &nbsp;</div>
+        <div>
+            &nbsp; <br />
+        </div>
+        @*<div class="form-group col-md-4">
+            <label for="exampleInputEmail2" style="width:100%">Company</label>
+            <input id="Countries" class=" form-control" type="text" placeholder="" style="width:100%">
+
+        </div>
+        <hr />
+        <div class="form-group col-md-4">
+            <label for="exampleInputEmail2" style="width:100%">Post Date</label>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker8'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar">
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+
+
+
+        </div>*@
+
+        @*<div class="form-group col-md-2">
+            <label for="exampleInputEmail2" style="width:100%">Minimum Salary</label>
+            <input id="MinSalary" class=" form-control" spellcheck="false" type="text" placeholder="" style="width:100%">
+
+        </div>
+        <div class="form-group col-md-2">
+            <label for="exampleInputEmail2" style="width:100%">Maximum Salary</label>
+
+            <input id="MaxSalary" class=" form-control" spellcheck="false" type="text" placeholder="" style="width:100%">
+        </div>
+        <div class="form-group  col-md-4">
+            <label for="exampleInputEmail1" style="width:100%">Type</label>
+            <input type="checkbox" name="rbjobtype" value="rbParttime" for="Jobtype"> Part-Time
+            <input type="checkbox" name="rbjobtype" value="rbfulltime" for="Jobtype"> Full-Time
+
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleInputEmail2" style="width:100%">Distance</label>
+            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+
+        </div>*@
+
+
+
+
+
+        <div class="row border rounded font-weight-bold text-justify mt-5" style="background-color:#faf3e8" id="SearchContent"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="~/js/typeahead.bundle.js"></script>
+
+        <script>
+    var minSalary = 0;
+    var maxSalary = 0;
+    var datevalue='';
+    jQuery(document).on('click', '.mega-dropdown', function(e) {
+  e.stopPropagation()
+})
+    $(document).ready(function () {
+         $('#datetimepicker8').datepicker({
+                icons: {
+
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down"
+                }
+            });
+      $('#ex1').slider({
+          formatter: function (value) {
+              return 'Current value: ' + value;
+          }
+      });
+        $('#JobSearch').typeahead({
+            hint: true,
+            highlight: true, /* Enable substring highlighting */
+            minLength: 1 /* Specify minimum characters required for showing result */
+            },
+            {
+                name: 'jobs',
+                source: function (query, process) {
+
+                    return $.get('@Url.Action("JobSearch","JobDetail")', { query: query }, function (data) {
+                        var array1 = [];
+                        var div = "";
+                        $.each(data, function (items) {
+                            div = "<p>" + data[items].jobTitle + "</p>";
+                            array1.push(data[items].jobTitle);
+                        });
+                        $(".tt-menu").css("display", "block !important");
+                        $(".tt-dataset-jobs").html(div);
+                        data = array1;
+                        $(".dropdown-menu").css("height", "auto");
+                        response(array1);
+                    });
+                }
+            });
+
+
+		@*$('#Countries').typeahead({
+        hint: true,
+        highlight: true, /* Enable substring highlighting */
+        minLength: 1 /* Specify minimum characters required for showing result */
+    },
+    {
+        name: 'jobs',
+        source:  function (query, process) {
+			debugger
+
+				return $.get('@Url.Action("JobSearch","JobDetail")', { query: query }, function (data) {
+					debugger
+					var array1 = [];
+					var div = "";
+					$.each(data, function (items) {
+						div = "<p>" + data[items].jobTitle + "</p>";
+						//array1.push(data[items].jobTitle);
+					});
+					$(".tt-menu").css("display", "block !important");
+					$(".tt-dataset-jobs").html(div);
+					data = array1;
+					return array1;
+				});
+			}
+    });*@
+});
+
+// Without JQuery
+
+
+
+
+		@*$('#Countries').typeahead({
+			source: function (query, process) {
+				debugger
+				return $.get('@Url.Action("JobSearch","JobDetail")', { query: query }, function (data) {
+					return process(data.options);
+				});
+			}
+		});
+	});*@
+    $("#parttime").click(function () {
+
+        SearchJobs();
+
+    });
+    $("#fulltime").click(function () {
+
+        SearchJobs();
+
+     });
+    function SearchSalary(min, max) {
+
+        minSalary = min;
+        maxSalary = max;
+        SearchJobs();
+    }
+    function SearchBy(type) {
+        if (type == 0) datevalue = "lastWeek";
+        else if (type == 1) datevalue = "lastMonth";
+        else if (type == 2) datevalue = "recent";
+        SearchJobs();
+    }
+	function SearchJobs() {
+
+        var request = new Object();
+        request.JobTitle = $("#JobSearch").val();
+        request.Location = $("#Countries").val();
+        //request.MinSalary = minSalary;
+        //request.MaxSalary = maxSalary;
+        request.JobPostDate = datevalue;
+       if($("#parttime").prop("checked") == true){
+               request.Jobtype = "Part-Time";
+        }
+        if ($("#fulltime").prop("checked") == true) {
+                request.Jobtype += ",Full-Time";
+            }
+         //request.Location = $("#Countries").val();
+        $("#SearchContent").load('@Url.Action("JobSearchResult","Talent")', request, function (data) {
+            $('#SearchContent').html(data);
+        });
+
+	}
+
+        </script>

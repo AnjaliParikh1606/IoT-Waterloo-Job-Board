@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -27,57 +28,83 @@
                 <!-- <img class="iconeSyle" src="~/Images/iotWaterloo-logo-2.png" />-->
                 <nav class="navbar navbar-expand-sm navbar-expand-md navbar-toggleable-sm navbar-light bg-transparent box-shadow mb-3">
                     <div class="text-black-50">
-                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation bg-dark">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="container float-right" style="padding-top:10px; font-size:26px;">
-                        <div class="navbar-collapse container-fluid collapse d-sm-inline-flex flex-sm-row">
+                    <div class="container float-right" style="padding-top:10px; font-size:22px;">
+                        <div class="navbar-collapse   container-fluid collapse d-sm-inline-flex flex-sm-row">
                             <!--   <partial name="_LoginPartial" /> -->
-                            <ul class="navbar-nav flex-grow-1">
+                            <ul class="navbar-nav  flex-grow-1">
                                 <li>
-                                    <div class="" style="width:180px;"> &nbsp;&nbsp;</div>
+                                    <a class="nav-link text-white" style="width:180px;" asp-area="" asp-controller="Home" asp-action="Index"> &nbsp;&nbsp;</a>
+                                    @*<div class=""></div>*@
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
                                 @*<li class="nav-item  dropdown">
-                                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
-                                                    <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
-                                    <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
-                                </ul>
-                                </li>*@
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Employers</a>
-                                    <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
-                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Create">Create Employers</a></li>
-                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">View Employers</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
-                                    <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
-                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Create">Create Post</a></li>
-                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Index">View Post</a></li>
-                                    </ul>
+                            <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Homepage</a>
+                            <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
+            <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+            <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Employers</a></li>
+        </ul>
+        </li>*@
+                                @if ((@Context.Session.GetString("roleid") != null) && (@Context.Session.GetString("roleid").Equals("1")))
+                                {
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Employers</a>
+                                        <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
+                                            <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="CreateCompany">Create Employers</a></li>
+                                            <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Index">View Employers</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                else
+                                if ((@Context.Session.GetString("roleid") != null) && (@Context.Session.GetString("roleid").Equals("2")))
+                                {
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="CompanyDetail" asp-action="Index">Company</a>
+                                        <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
+                                            <li> <a class="nav-link text-white" asp-area="" asp-controller="CompanyDetail" asp-action="Profile">Profile Update</a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                }
+
+                                @if ((@Context.Session.GetString("roleid") != null) && (@Context.Session.GetString("roleid").Equals("1") || @Context.Session.GetString("roleid").Equals("2")))
+                                {
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Job Post</a>
+                                        <ul class="dropdown-menu text-white bg-purple border-top bgColor" style="background-color:#341646">
+                                            <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Create">Create Post</a></li>
+                                            <li> <a class="nav-link text-white" asp-area="" asp-controller="JobDetail" asp-action="Index">View Post</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                <li class="nav-item">
+                                    @*// <a class="nav-link text-white" asp-area="" asp-controller="Talent" asp-action="Index">Talent</a>*@
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="JobSearch">Talent</a>
+                                    @*<a class="nav-link text-white " href="/home/index">Talent</a>*@
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Talent</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Partners">Partners</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" style="width:178px;" asp-area="" asp-controller="Home" asp-action="Index">Event & News</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Partners</a>
-                                </li>
+
+                            </ul>
+                            <ul class="navbar-nav  flex-grow-1 float-xl-right ">
                                 <li class="nav-item  dropdown">
-                                    <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Index">Company</a>
-                                    <ul class="dropdown-menu text-white bg-purple border-top" style="background-color:#341646;">
-                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Partners">Partners</a></li>
-                                        <li> <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="AboutUS">About Us</a></li>
-                                    </ul>
+                                    @if (string.IsNullOrEmpty(@Context.Session.GetString("roleid")))
+                                    {
+                                            <a class="nav-link text-white" asp-area="" asp-controller="AccountInformations" asp-action="Login">Login</a>
+                                            @*<img src="~/Images/login.png" style="height:45px; width:45px" />*@
+                                    }
+                                    else if((@Context.Session.GetString("roleid") != null))
+                                    {
+                                        <a class="nav-link text-white" asp-area="" asp-controller="AccountInformations" asp-action="Logout"> @Context.Session.GetString("emailid"), Logout</a>
+                                    }
                                 </li>
                             </ul>
                         </div>
@@ -85,7 +112,7 @@
                 </nav>
             </div>
         </div>
-    </header>
+</header>
     <div>
         <div>
             <partial name="_CookieConsentPartial" />
@@ -122,8 +149,8 @@
                         <a>NEWS</a>
                     </div>
                 </div>
-                </div>
             </div>
+        </div>
     </footer>
 
     <environment include="Development">

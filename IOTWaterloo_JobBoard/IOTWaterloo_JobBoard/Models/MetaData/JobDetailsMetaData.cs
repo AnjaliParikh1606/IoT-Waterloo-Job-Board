@@ -10,6 +10,10 @@ namespace IOTWaterloo_JobBoard.Models
     [ModelMetadataType(typeof(JobDetailsMetaData))]
     public partial class JobDetails : IValidatableObject
     {
+
+        /// <summary>
+        /// Author:Anjali Parikh
+        /// </summary>
         private JobBoardContext _context;
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
@@ -25,7 +29,7 @@ namespace IOTWaterloo_JobBoard.Models
                 yield return new ValidationResult("Please Add Job Description");
             if (!string.IsNullOrEmpty(JobPostDate.ToString()))
             {
-                if (JobPostDate < DateTime.Now)
+                if (JobPostDate < DateTime.Now.Date)
                     yield return new ValidationResult("Job Posting Date must not be in past");
             }
             else yield return new ValidationResult("Please Select Job Posting Date and Time");

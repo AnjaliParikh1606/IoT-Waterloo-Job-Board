@@ -1,13 +1,13 @@
 USE [master]
 GO
-/****** Object:  Database [JobBoard]    Script Date: 2019-11-18 1:00:43 PM ******/
+/****** Object:  Database [JobBoard]    Script Date: 2019-12-08 4:39:42 PM ******/
 CREATE DATABASE [JobBoard]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'JobBoard', FILENAME = N'C:\Users\User\JobBoard.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'JobBoard_log', FILENAME = N'C:\Users\User\JobBoard_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
-GO
+-- CONTAINMENT = NONE
+-- ON  PRIMARY 
+--( NAME = N'JobBoard', FILENAME = N'C:\Users\User\JobBoard.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+-- LOG ON 
+--( NAME = N'JobBoard_log', FILENAME = N'C:\Users\User\JobBoard_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+--GO
 ALTER DATABASE [JobBoard] SET COMPATIBILITY_LEVEL = 130
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
@@ -87,7 +87,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
 GO
 USE [JobBoard]
 GO
-/****** Object:  Table [dbo].[AccountInformation]    Script Date: 2019-11-18 1:00:43 PM ******/
+/****** Object:  Table [dbo].[AccountInformation]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -102,7 +102,7 @@ CREATE TABLE [dbo].[AccountInformation](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AgencyDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[AgencyDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -119,7 +119,7 @@ CREATE TABLE [dbo].[AgencyDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AgentDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[AgentDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -138,7 +138,7 @@ CREATE TABLE [dbo].[AgentDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CandidateDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[CandidateDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -156,7 +156,7 @@ CREATE TABLE [dbo].[CandidateDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CompanyDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[CompanyDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -180,7 +180,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CompnaySubscription]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[CompnaySubscription]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -196,7 +196,7 @@ CREATE TABLE [dbo].[CompnaySubscription](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EventDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[EventDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -216,21 +216,21 @@ CREATE TABLE [dbo].[EventDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[JobDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[JobDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[JobDetails](
 	[jobId] [int] IDENTITY(1,1) NOT NULL,
-	[jobTitle] [nvarchar](50) NOT NULL,
-	[category] [nvarchar](50) NOT NULL,
-	[location] [nvarchar](50) NOT NULL,
-	[jobtype] [nvarchar](50) NOT NULL,
-	[max_salary] [decimal](18, 2) NOT NULL,
-	[min_salary] [decimal](18, 2) NOT NULL,
-	[jobDescription] [nvarchar](500) NOT NULL,
-	[payPeriod] [decimal](18, 0) NOT NULL,
+	[jobTitle] [nvarchar](50) NULL,
+	[category] [nvarchar](50) NULL,
+	[location] [nvarchar](50) NULL,
+	[jobtype] [nvarchar](50) NULL,
+	[max_salary] [decimal](18, 2) NULL,
+	[min_salary] [decimal](18, 2) NULL,
+	[jobDescription] [nvarchar](500) NULL,
+	[payPeriod] [decimal](18, 0) NULL,
 	[numberOfPosition] [int] NULL,
 	[jobPostDate] [datetime] NULL,
 	[jobExpiryDate] [datetime] NULL,
@@ -241,7 +241,7 @@ CREATE TABLE [dbo].[JobDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LinkedInProfiles]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[LinkedInProfiles]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -255,7 +255,7 @@ CREATE TABLE [dbo].[LinkedInProfiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NewsLetter]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[NewsLetter]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -270,7 +270,7 @@ CREATE TABLE [dbo].[NewsLetter](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PaymentDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[PaymentDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -285,7 +285,7 @@ CREATE TABLE [dbo].[PaymentDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[RegistrationDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[RegistrationDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -305,7 +305,7 @@ CREATE TABLE [dbo].[RegistrationDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[RegistrationEventDetails]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[RegistrationEventDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -320,7 +320,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resume]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[Resume]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -334,7 +334,7 @@ CREATE TABLE [dbo].[Resume](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Role]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[Role]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -348,7 +348,7 @@ CREATE TABLE [dbo].[Role](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[WebsiteSubscriber]    Script Date: 2019-11-18 1:00:44 PM ******/
+/****** Object:  Table [dbo].[WebsiteSubscriber]    Script Date: 2019-12-08 4:39:42 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -360,6 +360,72 @@ CREATE TABLE [dbo].[WebsiteSubscriber](
 	[subscriberEmailId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'anjali123@gmail.com', N'@Ngel12345', 2)
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'Dropbox@gmail.com', N'@Ngel12345', 2)
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'ianpilon@gmail.com', N'Iotw@terloo2020', 2)
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'iotwaterloo', N'abc', 1)
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'Microsoft', N'abcxyz', 3)
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'Oracle', N'pqrz123', 1)
+GO
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'prof.bhagvat.patel@gmail.com', N'@Bc12345', 2)
+GO
+SET IDENTITY_INSERT [dbo].[CompanyDetails] ON 
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (1008, N'Iot Waterloo', N'31, Watercress ct', N'kitchener', N'N2E 3S8   ', N'2262680579', N'9946      ', N'abce@gmail.com', CAST(N'2019-12-31T12:59:00.000' AS DateTime), N'Jems robert Patel', 1, NULL)
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (1012, N'Oracle', N'44 Queen Street', N'Toroto', N'N2l 5Y9   ', N'5246254859', N'5623      ', N'rjems@oracle.ca', NULL, N'Robert Jems', 3, N'Oracle')
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (1013, N'Sap', N'44 Queen Street', N'Toroto', N'N2l 5Y9   ', N'5246254859', N'5623      ', N'rjems@oracle.ca', NULL, N'Robert Jems', 3, N'Oracle')
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (2009, N'Iot Waterloo', N'Waterloo Street', N'Waterloo', N'N2L 4B4   ', N'5623895652', N'5241      ', N'Waterloo@waterloo.in', CAST(N'2019-03-12T12:59:00.000' AS DateTime), N'Ian', 1, N'iotwaterloo')
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (2010, N'Microsoft Us', N'xzy street', N'waterloo', N'N2l 5k9   ', N'5263415623', N'4152      ', N'microsoftjems@microsoft.ca', CAST(N'2019-11-25T12:58:00.000' AS DateTime), N'Jems robert', 2, N'Microsoft')
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (2014, N'Agfa', N'xyz', N'waterloo', N'n2l5k9    ', N'5412638974', N'4152      ', N'abc@gmail.com', NULL, N'jems', 2, N'Oracle')
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (3013, N'conestoga', N'abc street', N'abc ', N'N2E 3S8   ', N'5723568962', NULL, N'abc@gmail.com', CAST(N'2019-12-02T12:59:00.000' AS DateTime), N'Jems robert', 3, NULL)
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (3014, N'Oracle', N'waterloo street', N'waterloo ', N'N2L 4G2   ', NULL, NULL, N'anjali123@gmail.com', CAST(N'2019-12-05T12:59:00.000' AS DateTime), N'Jems', 2, N'anjali123@gmail.com')
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (4020, N'Microsoft Us', N'31, Watercress ct', N'kitchener', N'N2E 3S8   ', NULL, NULL, NULL, NULL, N'Anjaliben Parikh', 1, NULL)
+GO
+INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (4025, N'Ratha Krishna', N'31, Watercress ct', N'kitchener', N'N2E 3S8   ', NULL, NULL, N'Dropbox@gmail.com', CAST(N'2019-12-08T12:59:00.000' AS DateTime), N'Shree', 2, N'Dropbox@gmail.com')
+GO
+SET IDENTITY_INSERT [dbo].[CompanyDetails] OFF
+GO
+SET IDENTITY_INSERT [dbo].[JobDetails] ON 
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (4, N'Java Software Developer', N'Intern', N'Kitchnere', N'Full-Time', NULL, NULL, N'This is job has lot of opportunity of expanding career', NULL, 1, CAST(N'2019-12-31T12:59:00.000' AS DateTime), CAST(N'2019-12-31T12:59:00.000' AS DateTime), 2014)
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (6, N'Software Developer', N'Contract', N'Toronto', N'Full-Time', NULL, NULL, N'This job is about software Developer', NULL, 5, CAST(N'2019-12-31T12:59:00.000' AS DateTime), CAST(N'2020-12-31T12:59:00.000' AS DateTime), 1012)
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (8, N'Software Tester', N'Volunteer', N'Waterloo', N'Full-Time', NULL, NULL, N'This job is in Waterloo instead of Toronto', NULL, 1, CAST(N'2019-12-31T12:59:00.000' AS DateTime), CAST(N'2020-01-06T12:59:00.000' AS DateTime), 2014)
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (9, N'Project Manager', N'Volunteer', N'waterloo', N'Full-Time', NULL, NULL, N'This is the description of job', NULL, 2, CAST(N'2019-12-02T12:59:00.000' AS DateTime), CAST(N'2019-12-08T23:58:00.000' AS DateTime), 3013)
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (11, N'software Manager', N'Contract', N'waterloo', N'Part-Time', NULL, NULL, N'This is Job Description', NULL, -1, CAST(N'2019-12-08T12:59:00.000' AS DateTime), CAST(N'2019-12-31T12:59:00.000' AS DateTime), 1008)
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (12, N'Software Developer', N'Contract', N'Kitchnere', N'Part-Time', NULL, NULL, N'This job requirement', NULL, 2, CAST(N'2019-12-08T12:59:00.000' AS DateTime), CAST(N'2019-12-31T12:59:00.000' AS DateTime), 1008)
+GO
+INSERT [dbo].[JobDetails] ([jobId], [jobTitle], [category], [location], [jobtype], [max_salary], [min_salary], [jobDescription], [payPeriod], [numberOfPosition], [jobPostDate], [jobExpiryDate], [compnayId]) VALUES (13, N'Shopify', N'Contract', N'Waterloo', N'Full-Time', NULL, NULL, N'This is shopify job description', NULL, 2, CAST(N'2019-12-08T12:59:00.000' AS DateTime), CAST(N'2020-01-01T12:59:00.000' AS DateTime), 1008)
+GO
+SET IDENTITY_INSERT [dbo].[JobDetails] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Role] ON 
+GO
+INSERT [dbo].[Role] ([roleId], [permissionType]) VALUES (1, N'Admin')
+GO
+INSERT [dbo].[Role] ([roleId], [permissionType]) VALUES (2, N'Employer')
+GO
+INSERT [dbo].[Role] ([roleId], [permissionType]) VALUES (3, N'Candidate')
+GO
+SET IDENTITY_INSERT [dbo].[Role] OFF
 GO
 ALTER TABLE [dbo].[AccountInformation]  WITH CHECK ADD  CONSTRAINT [FK_Role_AccountInformation] FOREIGN KEY([roleId])
 REFERENCES [dbo].[Role] ([roleId])

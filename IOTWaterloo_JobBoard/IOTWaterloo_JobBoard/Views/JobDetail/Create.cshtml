@@ -1,12 +1,14 @@
-﻿@model IOTWaterloo_JobBoard.Models.JobDetails
+﻿@*Author:Anjali Parikh*@
+@model IOTWaterloo_JobBoard.Models.JobDetails
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Job";
 }
+
+
     <div>
         <h4 class="text-center">Create Job Post</h4>
         <hr />
-        
 
     </div>
 <div class="container">
@@ -55,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label asp-for="JobPostDate" class="control-label">Posting Date</label>
-                            <input asp-for="JobPostDate"  class="form-control"  />
+                            <input asp-for="JobPostDate" class="form-control" />
                             <span asp-validation-for="JobPostDate" class="text-danger"></span>
                         </div>
                         <div class="form-group">
@@ -73,21 +75,23 @@
                         </div>
 
                         @*<div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-primary" />
-                        </div>
-                        <button class="btn btn-group-lg bg-purple " style="background-color:#341646;">
-                            <a class="text-white text-decoration-none" asp-area="" asp-action="Edit">Edit</a>
-                        </button>*@
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                            <button class="btn btn-group-lg bg-purple " style="background-color:#341646;">
+                                <a class="text-white text-decoration-none" asp-area="" asp-action="Edit">Edit</a>
+                            </button>*@
                     </form>
                     <div>
                         <a asp-action="Index">Back to List</a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div>&nbsp;<br /> &nbsp;</div>
+<div>&nbsp;<br /> &nbsp;</div>
 @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

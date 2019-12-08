@@ -1,0 +1,93 @@
+﻿@model IOTWaterloo_JobBoard.Models.JobDetails
+
+@{
+    ViewData["Title"] = "Create";
+}
+    <div>
+        <h4 class="text-center">Create Job Post</h4>
+        <hr />
+        
+
+    </div>
+<div class="container">
+    <div class="container-fluid">
+        <div class="border rounded font-weight-bold text-justify p-4 ">
+            <div class="row">
+                <div class="col-md-11">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="JobTitle" class="control-label">Job Title</label>
+                            <input asp-for="JobTitle" class="form-control col-5" />
+                            <span asp-validation-for="JobTitle" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Location" class="control-label">Location</label>
+                            <input asp-for="Location" class="form-control col-5" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Jobtype" class="control-label">Job Type</label><br />
+                            <input type="radio" name="jobtype" value="Part-Time" asp-for="Jobtype"> Part-Time
+                            <input type="radio" name="jobtype" value="Full-Time" asp-for="Jobtype"> Full-Time
+                            <span asp-validation-for="Jobtype" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Category" class="control-label">Classification</label>
+                            <select asp-for="Category" class="form-control col-5">
+                                <option value="Contract">Contract</option>
+                                <option value="Intern">Intern</option>
+                                <option value="Temporary">Temporary</option>
+                                <option value="Volunteer">Volunteer</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="Category" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="JobDescription" class="control-label">Job Description</label>
+                            <textarea asp-for="JobDescription" rows="5" cols="5" class="form-control" placeholder="Write Your Description Of Job Including Requirement"></textarea>
+                            <span asp-validation-for="JobDescription" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NumberOfPosition" class="control-label"></label>
+                            <input asp-for="NumberOfPosition" class="form-control" />
+                            <span asp-validation-for="NumberOfPosition" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="JobPostDate" class="control-label">Posting Date</label>
+                            <input asp-for="JobPostDate"  class="form-control"  />
+                            <span asp-validation-for="JobPostDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="JobExpiryDate" class="control-label">Expiry Date</label>
+                            <input asp-for="JobExpiryDate" class="form-control" />
+                            <span asp-validation-for="JobExpiryDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CompnayId" class="control-label"></label>
+                            <select asp-for="CompnayId" class="form-control" asp-items="ViewBag.CompanyName"></select>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn bgColor" />
+                            <button class="btn bgColor"> <a class="links" asp-action="Index">Back to List</a></button>
+                        </div>
+
+                        @*<div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                        <button class="btn btn-group-lg bg-purple " style="background-color:#341646;">
+                            <a class="text-white text-decoration-none" asp-area="" asp-action="Edit">Edit</a>
+                        </button>*@
+                    </form>
+                    <div>
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }

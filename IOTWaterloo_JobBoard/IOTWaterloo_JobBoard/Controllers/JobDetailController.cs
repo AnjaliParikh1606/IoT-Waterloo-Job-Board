@@ -9,6 +9,10 @@ using IOTWaterloo_JobBoard.Models;
 
 namespace IOTWaterloo_JobBoard.Controllers
 {
+
+    /// <summary>
+    /// Author:Anjali Parikh
+    /// </summary>
     public class JobDetailController : Controller
     {
         private readonly JobBoardContext _context;
@@ -65,7 +69,7 @@ namespace IOTWaterloo_JobBoard.Controllers
                 {
                     _context.Add(jobDetails);
                     await _context.SaveChangesAsync();
-                    TempData["DisplayMessage"] = "Job Successfully Posted";
+                    TempData["success"] =true;
                     return RedirectToAction(nameof(Create));
                 }
                 ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
@@ -115,7 +119,7 @@ namespace IOTWaterloo_JobBoard.Controllers
                     {
                         _context.Update(jobDetails);
                         await _context.SaveChangesAsync();
-                        ViewData["DisplayMessage"] = "Job Updated Successfully";
+                        TempData["success"] = true;
                     }
                     catch (DbUpdateConcurrencyException)
                     {
@@ -128,7 +132,7 @@ namespace IOTWaterloo_JobBoard.Controllers
                             throw;
                         }
                     }
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Details", "JobDetail", new { @id = jobDetails.JobId });
                 }
                 ViewData["CompanyName"] = new SelectList(_context.CompanyDetails, "CompanyId", "CompanyName");
                 return View(jobDetails);
@@ -168,6 +172,8 @@ namespace IOTWaterloo_JobBoard.Controllers
             var jobDetails = await _context.JobDetails.FindAsync(id);
             _context.JobDetails.Remove(jobDetails);
             await _context.SaveChangesAsync();
+            TempData["success"] = true;
+            TempData["message"] = "Job has been deleted";
             return RedirectToAction(nameof(Index));
         }
 

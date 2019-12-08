@@ -1,4 +1,6 @@
-﻿@model IOTWaterloo_JobBoard.Models.CompanyDetails
+﻿    
+@model IOTWaterloo_JobBoard.ViewModels.Registration
+
 @{
     ViewData["Title"] = "Create";
 }
@@ -15,71 +17,72 @@
         <div class="row ">
             <div class="col-md-11">
                 <form asp-action="Create">
-                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
-                        <label asp-for="CompanyName" class="control-label text-justify">Company Name</label>
-                        <input asp-for="CompanyName" class="form-control col-8 col-lg-4" />
-                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                        <label asp-for="cdetails.CompanyName" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyName" class="form-control col-6" />
+                        <span asp-validation-for="cdetails.CompanyName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyAddress" class="control-label">Company Street Address</label>
-                        <input asp-for="CompanyAddress" class="form-control col-8 col-lg-4" />
-                        <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+                        <label asp-for="cdetails.CompanyAddress" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyAddress" class="form-control col-6" required />
+                        <span asp-validation-for="cdetails.CompanyAddress" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyCity" class="control-label">Company City</label>
-                        <input asp-for="CompanyCity" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyCity" class="text-danger"></span>
+                        <label asp-for="cdetails.CompanyCity" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyCity" class="form-control col-6" required />
+                        <span asp-validation-for="cdetails.CompanyCity" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyPostalCode" class="control-label">Postal Code</label>
-                        <input asp-for="CompanyPostalCode" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyPostalCode" class="text-danger"></span>
+                        <label asp-for="cdetails.CompanyPostalCode" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyPostalCode" class="form-control col-6" required />
+                        <span asp-validation-for="cdetails.CompanyPostalCode" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyLandLinePhoneNumber" class="control-label">Phone Number</label>
-                        <input asp-for="CompanyLandLinePhoneNumber" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyLandLinePhoneNumber" class="text-danger"></span>
+                        <label asp-for="cdetails.CompanyEmailId" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyEmailId" class="form-control col-6" required />
+                        <span asp-validation-for="cdetails.CompanyEmailId" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyLandLineExtensionNumber" class="control-label">Phone Extension Number</label>
-                        <input asp-for="CompanyLandLineExtensionNumber" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyLandLineExtensionNumber" class="text-danger"></span>
+                        <label class="control-label">Confirm Email</label>
+                        <input class="form-control col-6" name="confirmEmail" id="ConfirmEmail" required />
+                        <span name="confirmEmail"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyEmailId" class="control-label">Email Address</label>
-                        <input asp-for="CompanyEmailId" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyEmailId" class="text-danger"></span>
+                        <label asp-for="acinfo.Password" class="control-label "></label>
+                        <input asp-for="acinfo.Password" type="password" class="form-control col-6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$"
+                               title="Must contain at least one number and one uppercase and lowercase letter, at least 8 characters and one sepcial character" required />
+                        <span asp-validation-for="acinfo.Password" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyRegistrationDateTime" class="control-label">Registration Time</label>
-                        <input asp-for="CompanyRegistrationDateTime" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyRegistrationDateTime" class="text-danger"></span>
+                        <label class="control-label">Confirm Password</label>
+                        <input class="form-control col-6" name="confirmPass" type="password" id="ConfirmPassword" required />
+                        <span name="confirmPass"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="CompanyContactPerson" class="control-label">Contact Person</label>
-                        <input asp-for="CompanyContactPerson" class="form-control col-6 col-sm-4" />
-                        <span asp-validation-for="CompanyContactPerson" class="text-danger"></span>
+                        <label asp-for="cdetails.CompanyRegistrationDateTime" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyRegistrationDateTime" class="form-control col-6" required />
+                        <span asp-validation-for="cdetails.CompanyRegistrationDateTime" class="text-danger"></span>
                     </div>
                     @*Pass value when integrated with other module*@
                     <div class="form-group">
-                        <label asp-for="RoleId" class="control-label">Role</label>
-                        <select asp-for="RoleId" class="form-control col-6 col-sm-4" asp-items="ViewBag.RoleId"></select>
+                        <label asp-for="cdetails.CompanyContactPerson" class="control-label"></label>
+                        <input asp-for="cdetails.CompanyContactPerson" class="form-control col-6" required />
+                        <span asp-validation-for="cdetails.CompanyContactPerson" class="text-danger"></span>
                     </div>
+                    @*<p> all fields with <label class="color">*</label> are required</p>*@
                     @*<div class="form-group">
-                        <label asp-for="UserName" class="control-label">User Name</label>
-                        <select asp-for="UserName" class="form-control col-6 col-sm-4" asp-items="ViewBag.UserName">User Name</select>
-                    </div>*@
+                            <label asp-for="UserName" class="control-label">User Name</label>
+                            <select asp-for="UserName" class="form-control col-6 col-sm-4" asp-items="ViewBag.UserName">User Name</select>
+                        </div>*@
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn bgColor" />
-                    
-                        <button class="btn bgColor"> <a class="links" asp-action="Index">Back to List</a></button>
+                        <input type="submit" value="Create" class="btn bgColor btn-block">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-  
+
 </div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

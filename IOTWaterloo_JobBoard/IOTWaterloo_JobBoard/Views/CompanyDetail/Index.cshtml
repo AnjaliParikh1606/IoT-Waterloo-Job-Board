@@ -1,13 +1,21 @@
-﻿@model IEnumerable<IOTWaterloo_JobBoard.Models.CompanyDetails>
+﻿@*Author:Anjali Parikh*@
+@model IEnumerable<IOTWaterloo_JobBoard.Models.CompanyDetails>
+
 
 @{
     ViewData["Title"] = "Index";
 }
-<div class="container-fluid">
-    &nbsp;
-    <h4 class="text-center">Employer List</h4>
-    <hr/>
-</div>
+    <div class="container-fluid">
+        &nbsp;
+        <h4 class="text-center">Employer List</h4>
+        <hr />
+        @if ((bool?)TempData["success"] == true)
+        {
+    <div class="alert alert-success">
+        <strong>Success!</strong> @TempData[" message"]
+    </div>
+        }
+    </div>
 <div class="container">
     <div class="container-fluid">
         <form method="post" class="form-inline">
