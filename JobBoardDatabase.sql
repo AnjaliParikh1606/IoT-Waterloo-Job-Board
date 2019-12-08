@@ -1,13 +1,9 @@
 USE [master]
 GO
-/****** Object:  Database [JobBoard]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Database [JobBoard]    Script Date: 2019-12-08 5:18:07 PM ******/
 CREATE DATABASE [JobBoard]
--- CONTAINMENT = NONE
--- ON  PRIMARY 
---( NAME = N'JobBoard', FILENAME = N'C:\Users\User\JobBoard.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
--- LOG ON 
---( NAME = N'JobBoard_log', FILENAME = N'C:\Users\User\JobBoard_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
---GO
+ CONTAINMENT = NONE
+ 
 ALTER DATABASE [JobBoard] SET COMPATIBILITY_LEVEL = 130
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
@@ -87,7 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
 GO
 USE [JobBoard]
 GO
-/****** Object:  Table [dbo].[AccountInformation]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[AccountInformation]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -102,7 +98,7 @@ CREATE TABLE [dbo].[AccountInformation](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AgencyDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[AgencyDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -119,7 +115,7 @@ CREATE TABLE [dbo].[AgencyDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AgentDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[AgentDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -138,7 +134,7 @@ CREATE TABLE [dbo].[AgentDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CandidateDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[CandidateDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -156,7 +152,7 @@ CREATE TABLE [dbo].[CandidateDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CompanyDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[CompanyDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -180,7 +176,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CompnaySubscription]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[CompnaySubscription]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -196,7 +192,7 @@ CREATE TABLE [dbo].[CompnaySubscription](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EventDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[EventDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -216,7 +212,7 @@ CREATE TABLE [dbo].[EventDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[JobDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[JobDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -241,7 +237,7 @@ CREATE TABLE [dbo].[JobDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LinkedInProfiles]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[LinkedInProfiles]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -255,7 +251,7 @@ CREATE TABLE [dbo].[LinkedInProfiles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NewsLetter]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[NewsLetter]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -270,7 +266,7 @@ CREATE TABLE [dbo].[NewsLetter](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PaymentDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[PaymentDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -285,7 +281,7 @@ CREATE TABLE [dbo].[PaymentDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[RegistrationDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[RegistrationDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -305,7 +301,7 @@ CREATE TABLE [dbo].[RegistrationDetails](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[RegistrationEventDetails]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[RegistrationEventDetails]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -320,7 +316,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Resume]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[Resume]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -334,7 +330,7 @@ CREATE TABLE [dbo].[Resume](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Role]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[Role]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -348,7 +344,7 @@ CREATE TABLE [dbo].[Role](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[WebsiteSubscriber]    Script Date: 2019-12-08 4:39:42 PM ******/
+/****** Object:  Table [dbo].[WebsiteSubscriber]    Script Date: 2019-12-08 5:18:07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -361,20 +357,16 @@ CREATE TABLE [dbo].[WebsiteSubscriber](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'anjali123@gmail.com', N'@Ngel12345', 2)
-GO
+
 INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'Dropbox@gmail.com', N'@Ngel12345', 2)
 GO
-INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'ianpilon@gmail.com', N'Iotw@terloo2020', 2)
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'ianpilon@gmail.com', N'Iotw@terloo2020', 1)
 GO
-INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'iotwaterloo', N'abc', 1)
+INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'iotwaterloo', N'@dmiN2020', 1)
 GO
 INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'Microsoft', N'abcxyz', 3)
 GO
-INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'Oracle', N'pqrz123', 1)
-GO
-INSERT [dbo].[AccountInformation] ([userName], [password], [roleId]) VALUES (N'prof.bhagvat.patel@gmail.com', N'@Bc12345', 2)
-GO
+
 SET IDENTITY_INSERT [dbo].[CompanyDetails] ON 
 GO
 INSERT [dbo].[CompanyDetails] ([companyId], [companyName], [companyAddress], [companyCity], [companyPostalCode], [companyLandLinePhoneNumber], [companyLandLineExtensionNumber], [companyEmailId], [companyRegistrationDateTime], [companyContactPerson], [roleId], [userName]) VALUES (1008, N'Iot Waterloo', N'31, Watercress ct', N'kitchener', N'N2E 3S8   ', N'2262680579', N'9946      ', N'abce@gmail.com', CAST(N'2019-12-31T12:59:00.000' AS DateTime), N'Jems robert Patel', 1, NULL)

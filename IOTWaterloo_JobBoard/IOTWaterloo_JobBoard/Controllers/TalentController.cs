@@ -421,7 +421,7 @@ namespace IOTWaterloo_JobBoard.Controllers
                 #region new code email
 
                 //send email
-                using (MailMessage mm = new MailMessage("iotwaterloojobboard@gmail.com", "anjalid166@gmail.com")) // fromId, ToId
+                using (MailMessage mm = new MailMessage("iotwaterloojobboard@gmail.com", "ianpilon@gmail.com")) // fromId, ToId
                 {
                     mm.Subject = "IOT Waterloo Candidate Detail (Job Request)";
                     mm.Body = request.FirstName + " " + request.LastName + " requesting for a job from " +
